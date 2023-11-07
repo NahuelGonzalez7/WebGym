@@ -1,25 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of } from 'rxjs';
-import { User } from './models';
+import { Routine, User } from './models';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
+  baseURL: string = 'http://localhost:3000';
 
-  baseURL: string = "http://localhost:3000"
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
+  //#region Users Methods
 
-  getUsers(): Observable<User[]>{
+  getUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${this.baseURL}/users`);
   }
 
-  getUserToAuth(email:string, password: string): Observable<User[]>{
-    return this.http.get<User[]>(`${this.baseURL}/users?email=${email}&password=${password}`);
+  getUserToAuth(email: string, password: string): Observable<User[]> {
+    return this.http.get<User[]>(
+      `${this.baseURL}/users?email=${email}&password=${password}`
+    );
   }
-/*
+  /*
   getPersons(): Observable<Person[]>{
     return this.http.get<Person[]>(`${this.baseURL}/persons`);
   }
@@ -42,5 +45,41 @@ export class ApiService {
     );
   }*/
 
-}
+  //#endregion
 
+  //#region Routines Methods
+
+  /**
+   * Fetches a list of routines from the server.
+   *
+   * @returns An observable that emits an array of Routine objects.
+  */
+  getRoutines(): Observable<Routine[]> {
+    return this.http.get<Routine[]>(`${this.baseURL}/routines`).pipe(
+      map((data: any) => {
+        console.log(data[0]);
+        return data[0];
+      })
+    );
+  }
+
+  /**
+   * Fetches a list of routines for a specific day from the server.
+   *
+   * @param day - The day of the week for which routines are requested.
+   * @returns An observable that emits an array of Routine objects for the specified day.
+   */
+  getRoutinesByDay(day: string): Observable<Routine[]> {
+    return this.http.get<Routine[]>(`${this.baseURL}/routines`).pipe(
+      map((data: any) => {
+        if (data[day]) {
+          return data[day];
+        } else {
+          return [];
+        }
+      })
+    );
+  }
+
+  //#endregion
+}
