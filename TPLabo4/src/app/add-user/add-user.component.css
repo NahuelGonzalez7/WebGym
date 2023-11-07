@@ -1,0 +1,52 @@
+
+  /* Estilos para el contenedor principal */
+.register-form, .custom-dialog-title {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .custom-dialog-title{
+    background-color:whitesmoke;
+    color: black;
+  }
+
+  label {
+    display: block;
+    color: #666;
+    font-size: .9em;
+  }
+
+  .form-field {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    text-align: left;
+  }
+  
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: rgb(16, 112, 16);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #25c555;
+  }
+ 

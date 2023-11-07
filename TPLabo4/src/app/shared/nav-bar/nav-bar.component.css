@@ -1,12 +1,12 @@
 #menu-bar {
     float:right;  
-    /*display:none;*/
-    }      
+    display:none; /*se agrego el display none*/
+ }      
     
     header label {
     float: right;
     font-size: 28px;
-    margin: 6px 0px;
+    margin: 10px 0px;
     cursor: pointer; 
      }
     

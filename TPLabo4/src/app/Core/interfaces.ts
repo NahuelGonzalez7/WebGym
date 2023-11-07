@@ -3,3 +3,12 @@ export interface Iuser{
     email: string;
     password: string;
 }
+
+export interface Iejercicios{
+
+    nombre: string;
+    tipo: string;
+    descripcion: string;
+    duracion: number;
+}
+

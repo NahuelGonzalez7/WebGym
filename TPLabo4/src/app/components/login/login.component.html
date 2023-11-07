@@ -9,5 +9,8 @@
         <input type="password" id="password" placeholder="Ingrese su password..." name="password" [(ngModel)]="user.password" required>
       </div>
       <button class="open-button" type="submit">Ingresar</button>
+      <!--Se agrego esto-->
+      <p>¿No tienes una cuenta? <a (click)="navigateToRegister()">Regístrate aquí</a></p>
     </form>
 </div>
+
