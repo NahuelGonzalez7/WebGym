@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of } from 'rxjs';
-import { Routine, User } from './models';
+import { Excercise, Routine, User } from './models';
 
 @Injectable({
   providedIn: 'root',
@@ -53,7 +53,7 @@ export class ApiService {
    * Fetches a list of routines from the server.
    *
    * @returns An observable that emits an array of Routine objects.
-  */
+   */
   getRoutines(): Observable<Routine[]> {
     return this.http.get<Routine[]>(`${this.baseURL}/routines`).pipe(
       map((data: any) => {
@@ -80,6 +80,46 @@ export class ApiService {
       })
     );
   }
+
+  //#endregion
+
+  //#region excercises
+
+  getExcercises(): Observable<Excercise[]> {
+    return this.http.get<Excercise[]>(`${this.baseURL}/excercises`).pipe(
+      map((data: any) => {
+        console.log(data);
+        return data;
+      })
+    );
+  }
+
+  getExcercisesByType(typeOfExcercise: string): Observable<Excercise[]> {
+    //Si tuvieramos que usar el bucle de for declaramos este array
+    //const excerciseTypeArray: Excercise[] = [];
+    return this.http.get<Excercise[]>(`${this.baseURL}/excercises`).pipe(
+      map((data: any) => {
+        // for(let excercise of data) {
+        //   if(excercise.excerciseType == typeOfExcercise)
+        //     excerciseTypeArray.push(excercise);
+        // }
+        // return excerciseTypeArray;
+        
+        //Esta es una manera de hacerla con filter, que es la ideal porque te ahorras lineas de codigo y hace lo mismo que arriba
+        return data.filter(
+          (excercise: Excercise) => excercise.excerciseType == typeOfExcercise
+        );
+      })
+    );
+  }
+
+  getFavouriteExcercises() {}
+
+  //Crear rutina -> seleccionando, ejercicios y asignandole un dia a la rutina
+  // Podria tener un creador y eliminar de rutinas
+  // Y tambien un filtrador de rutinas por dia
+  // Un dia solo no tiene ejercicios
+  getFavouriteExcercisesByDay() {}
 
   //#endregion
 }
