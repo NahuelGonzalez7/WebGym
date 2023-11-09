@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-view-ejercicios',
   templateUrl: './view-ejercicios.component.html',

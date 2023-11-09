@@ -1,6 +1,23 @@
-<div>
-    <h2>Plan semanal</h2>
-    <table class="my-table">
+<div style="margin-top: 1%;">
+  <h2>Plan semanal</h2>
+  <div style="width: 20%;height: 20%;border: 1px solid black;">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <!-- <table class="my-table">
       <thead>
         <tr>
           <th>Lunes</th>
@@ -12,7 +29,7 @@
         </tr>
       </thead>
       <tbody>
-       <!-- <tr *ngFor="let person of inputPersons">
+        <tr *ngFor="let person of inputPersons">
           <td>{{ person.id }}</td>
           <td>{{ person.name }}</td>
           <td>{{ person.lastname }}</td>
@@ -20,7 +37,7 @@
           <td>{{ person.city }}</td>
           <td><button class="delete-button" (click)="deletePerson(person.id!)">X</button></td>
           <td><button class="edit-button" (click)="editPerson(person)">E</button></td>
-        </tr> -->
+        </tr> 
       </tbody>
-    </table>
-  </div>
+    </table> -->
+</div>
