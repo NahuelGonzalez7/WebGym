@@ -25,4 +25,8 @@ export class LoginComponent {
       alert("No existe el usuario");
     }
   }
+/*se agrego */
+  public navigateToRegister(){
+    this.router.navigate(['/register']);
+  }
 }

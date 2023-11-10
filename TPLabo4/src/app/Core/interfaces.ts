@@ -4,6 +4,7 @@ export interface Iuser{
     password: string;
 }
 
+
 export interface Iroutine{
     id: number | null;
     days: Edays;
@@ -30,4 +31,3 @@ export enum Edays{
     sabado,
     domingo
 }
-

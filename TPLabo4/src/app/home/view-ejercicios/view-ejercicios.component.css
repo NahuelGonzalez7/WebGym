@@ -1,0 +1,37 @@
+.my-table {
+    width: 60%;
+    border-collapse: collapse;
+  }
+  
+  .my-table th, .my-table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 12px;
+  }
+  
+  .my-table th {
+    background-color: #f2f2f2;
+    color: #333; 
+  }
+  
+  .my-table tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  .my-table tr:nth-child(odd) {
+    background-color: #fff; 
+  }
+
+  .my-table tr:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .example-card {
+    max-width: 100%;
+
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }

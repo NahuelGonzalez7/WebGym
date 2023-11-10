@@ -32,9 +32,9 @@
             border: 3px solid #f1f1f1;
             z-index: 9;
             height: 300px;
-            width: 300px;
+            width: 320px;
             background-color: rgba(51,51,51,0.9);
-            padding: 50px 50px;
+            padding: 25px 60px;
 
           }
           
@@ -86,6 +86,17 @@
             opacity: 1;
           }
           
+          /* Se agregaron estilos para el enlace de registro */
           
-          
-        
+          .form-popup a {
+            text-decoration: none;
+            color: #39db34;
+            font-weight: bold;
+          }
+
+          .form-popup a:hover {
+            text-decoration: underline;
+          }
+
+                    
+                  

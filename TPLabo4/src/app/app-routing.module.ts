@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { HomeComponent } from './home/home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
 {
@@ -12,6 +13,10 @@ const routes: Routes = [
   path:'home', 
   component: HomeComponent
   /*hacer el lazy loading*/
+},
+{
+  path:'register',
+  component: RegisterComponent
 },
 {
   path: '',

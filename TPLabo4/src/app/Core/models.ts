@@ -1,4 +1,6 @@
+
 import { Edays, Iexcercise, Iroutine as Iroutine, Iuser } from "./interfaces";
+
 
 export class User implements Iuser{
   id: number | null= null;
@@ -24,6 +26,7 @@ export class Routine implements Iroutine{
   }
 }
 
+
 export class Excercise implements Iexcercise {
   id: number | null;
   excercise: string;
@@ -41,3 +44,4 @@ export class Excercise implements Iexcercise {
     this.excerciseType = excercise == undefined ? null : excercise.excerciseType;
   }
 }
+

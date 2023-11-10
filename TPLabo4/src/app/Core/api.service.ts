@@ -25,13 +25,13 @@ export class ApiService {
   /*
   getPersons(): Observable<Person[]>{
     return this.http.get<Person[]>(`${this.baseURL}/persons`);
-  }
+  }*/
 
-  addPerson(createPerson: Person): Observable<boolean> {
-    const url = `${this.baseURL}/persons`;
-    return this.http.post<boolean>(url, createPerson);
+  addUser(createUser: User): Observable<boolean> {
+    const url = `${this.baseURL}/users`;
+    return this.http.post<boolean>(url, createUser);
   }
-
+/*
   editPerson(id: number, updatePerson: Person): Observable<boolean> {
     const url = `${this.baseURL}/persons/${id}`;
     return this.http.put<boolean>(url, updatePerson);

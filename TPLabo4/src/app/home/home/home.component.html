@@ -3,26 +3,10 @@
 </header>
 
 <div style="margin-top: 200px;">
-  <table>
-    <thead>
-      <tr>
-        <th>descripcion</th>
-        <th>repeticiones</th>
-        <th>series</th>
-        <th>ejercicio</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let routine of routines">
-        <!-- <td>{{routine.descripcion}}</td>
-        <td>{{routine.repeticiones}}</td>
-        <td>{{routine.series}}</td>
-        <td>{{routine.ejercicio}}</td> -->
-      </tr>
-    </tbody>
-  </table>
-</div>
+<!--se agrego el app view ejercicios-->
+<app-view-ejercicios></app-view-ejercicios>
 
-
+<!-- Se comento el body del home component
+<div>
 <!--footer-->
 <app-footer style="position: absolute; bottom: 0; width: 100%;"></app-footer>
