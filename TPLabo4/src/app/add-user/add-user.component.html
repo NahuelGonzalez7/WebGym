@@ -1,19 +1,71 @@
 <div>
     <h2 class="custom-dialog-title">Registrarse</h2>
-    <form autocomplete="off" class="register-form" (ngSubmit)="createUser()">
+    <form autocomplete="off"[formGroup]="loginForm" class="register-form" (ngSubmit)="createUser()">
   
       <div class="form-field">
-        <label for="email">Email:</label>
+        <label for="nombre">Nombre *</label>
         <br>
-        <input type="text" placeholder = "Ingrese su Email..." id="email" name="email" [(ngModel)]="newUser.email" required>
+        <input type="text" formControlName="nombre" placeholder = "Ingrese su nombre" [(ngModel)]="newUser.nombre" required>     
       </div>
-      
+        <span *ngIf="isValidField('nombre')" class="error-message">
+        {{getFieldError("nombre")}}
+        </span>
+        <br>
       <div class="form-field">
-        <label for="password">Password:</label>      
+        <label for="apellido">Apellido *</label>
         <br>
-        <input type="password" placeholder = "Ingrese su password..." id="password" name="password" [(ngModel)]="newUser.password" required>
+        <input type="text" formControlName="apellido" placeholder = "Ingrese su apellido" [(ngModel)]="newUser.apellido" required>
       </div>
-  
+      <span *ngIf="isValidField('apellido')" class="error-message">
+        {{getFieldError("apellido")}}
+        </span>
+      <br>
+      <div class="form-field">
+        <label for="edad">Edad *</label>
+        <br>
+        <input type="text" formControlName="edad" placeholder = "Ingrese su edad" [(ngModel)]="newUser.edad" required>
+      </div>
+      <span *ngIf="isValidField('edad')" class="error-message">
+        {{getFieldError("edad")}}
+        </span>
+      <br>
+      <div class="form-field">
+        <label for="peso">Peso *</label>
+        <br>
+        <input type="text" formControlName="peso" placeholder = "Ingrese su peso" [(ngModel)]="newUser.peso" required>
+      </div>
+      <span *ngIf="isValidField('peso')" class="error-message">
+        {{getFieldError("peso")}}
+        </span>
+        <br>
+      <div class="form-field">
+        <label for="altura">Altura *</label>
+        <br>
+        <input type="text" formControlName="altura" placeholder = "Ingrese su altura" [(ngModel)]="newUser.altura" required>
+      </div>
+      <span *ngIf="isValidField('altura')" class="error-message">
+        {{getFieldError("altura")}}
+        </span>
+<br>
+      <div class="form-field">
+        <label for="email">Email *</label>
+        <br>
+        <input type="text" formControlName="email" placeholder = "Ingrese su Email" [(ngModel)]="newUser.email" required>
+        </div>
+        <span *ngIf="isValidField('email')" class="error-message">
+          {{getFieldError("email")}}
+          </span>
+      <br>
+      <div class="form-field">
+        <label for="password">Password *</label>      
+        <br>
+        <input type="password" formControlName="password" placeholder = "Ingrese su password" [(ngModel)]="newUser.password" required>
+      </div>
+      <span *ngIf="isValidField('password')" class="error-message">
+        {{getFieldError("password")}}
+        </span>
+  <br>
+
       <button type="submit" class="register-button">Registrarse</button>
     </form>
   </div>
