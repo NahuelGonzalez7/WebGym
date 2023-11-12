@@ -12,7 +12,6 @@ const routes: Routes = [
 {
   path:'home', 
   component: HomeComponent
-  /*hacer el lazy loading*/
 },
 {
   path:'register',

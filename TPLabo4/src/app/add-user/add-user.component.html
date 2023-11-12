@@ -1,5 +1,6 @@
 <div>
     <h2 class="custom-dialog-title">Registrarse</h2>
+
     <form autocomplete="off"[formGroup]="loginForm" class="register-form" (ngSubmit)="createUser()">
   
       <div class="form-field">
@@ -11,6 +12,7 @@
         {{getFieldError("nombre")}}
         </span>
         <br>
+
       <div class="form-field">
         <label for="apellido">Apellido *</label>
         <br>
@@ -20,6 +22,7 @@
         {{getFieldError("apellido")}}
         </span>
       <br>
+
       <div class="form-field">
         <label for="edad">Edad *</label>
         <br>
@@ -29,15 +32,17 @@
         {{getFieldError("edad")}}
         </span>
       <br>
+
       <div class="form-field">
         <label for="peso">Peso *</label>
         <br>
-        <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'')" formControlName="peso" placeholder = "Ingrese su peso" [(ngModel)]="newUser.peso" required>
+        <input type="" oninput="this.value=this.value.replace(/[^0-9]/g,'')" formControlName="peso" placeholder = "Ingrese su peso" [(ngModel)]="newUser.peso" required>
       </div>
       <span *ngIf="isValidField('peso')" class="error-message">
         {{getFieldError("peso")}}
         </span>
         <br>
+
       <div class="form-field">
         <label for="altura">Altura *</label>
         <br>
@@ -46,7 +51,7 @@
       <span *ngIf="isValidField('altura')" class="error-message">
         {{getFieldError("altura")}}
         </span>
-<br>
+      <br>
       <div class="form-field">
         <label for="email">Email *</label>
         <br>
@@ -56,6 +61,7 @@
           {{getFieldError("email")}}
           </span>
       <br>
+
       <div class="form-field">
         <label for="password">Password *</label>      
         <br>
@@ -64,8 +70,9 @@
       <span *ngIf="isValidField('password')" class="error-message">
         {{getFieldError("password")}}
         </span>
-  <br>
+     <br>
 
       <button type="submit" class="register-button" [disabled]="loginForm.invalid">Registrarse</button>
+      
     </form>
   </div>

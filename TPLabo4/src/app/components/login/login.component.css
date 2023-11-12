@@ -1,106 +1,91 @@
+/*Form*/
 
-               /*Form*/
+.open-button,
+.submit-button {
+  display: flex;
+  background-color: rgba(211, 211, 211, 0.4);
+  color: black;
+  font-weight: bold;
+  padding: 5px 20px;
+  border: 1px solid #555;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  bottom: 100px;
+  width: 115px;
+  font-size: 15px;
+  justify-content: center;
+}
 
-        .open-button, .submit-button {
-            display: flex;
-            background-color: rgba(211,211,211, 0.4);
-            color:black;
-            font-weight: bold;
-            padding: 5px 20px;
-            border: 1px solid #555;
-            border-radius: 15px;
-            cursor: pointer;
-            text-align: center; 
-            bottom: 100px;
-            width: 115px;
-            font-size: 15px;
-            justify-content: center;
-          }
+.submit-button:disabled {
+  background-color: rgba(211, 211, 211, 0.4);
+}
 
-          .submit-button:disabled{
-         
-            background-color:  rgba(211,211,211, 0.4);
-          }
-          
-          .submit-button {
-            margin-top: 45px;
-            width: 100%;
-            border-radius: 5%;
-               background-color: #39db34;
-               
-          }
-          
-      
-          .open-button:hover {
-          background-color: rgba(51,51,51,0.5);
-          color:#fff;
-          
-          }
-                   
-          .form-popup {
-         
-            position:fixed;
-            left: 120px;
-            bottom: 0px;
-            border: 3px solid #f1f1f1;
-            /*z-index: 9;*/
-            height: 380px;
-            width:430px;           
-            background-color: rgba(51,51,51,0.9);
-            padding: 25px 60px;
+.submit-button {
+  margin-top: 45px;
+  width: 100%;
+  border-radius: 5%;
+  background-color: #39db34;
+}
 
-          }
+.open-button:hover {
+  background-color: rgba(51, 51, 51, 0.5);
+  color: #fff;
+}
 
-           span{
-          font-size: 10px;
-         }        
-        
-          /* Se agregaron estilos para el enlace de registro */
-          
-          .form-popup a {
-            text-decoration: none;
-            color: #39db34;
-            font-weight: bold;
-          }
+.form-popup {
+  position: fixed;
+  left: 120px;
+  bottom: 0px;
+  border: 3px solid #f1f1f1;
+  height: 380px;
+  width: 430px;
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 25px 60px;
+}
 
-          .form-popup a:hover {
-            text-decoration: underline;
-          }
-          
-          /* Add styles to the form container */
-          .form-container {
-            max-width: 100%;
-            height: 100%;
-          }
-          
-          /* Full-width input fields */
-          .form-container input[type=text], .form-container input[type=password]{
-            width: 100%;
-            padding: 13px;
-            margin: 0px 0 0px 0;
-            border: none;
-            background: #f1f1f1;
-          }
-          
-          /* When the inputs get focus, do something */
-          .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-            background-color: #ddd;
-            outline: none;
-          }
-          
-          /* Set a style for the submit/login button */
-          .form-container .btn {
-          
-            background-color: #39ff14;
-            color: white;
-            padding: 16px 20px;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            display: block;
-            margin: 0px 0px 10px 0px;
-            opacity: 0.8;
-          }
-          
-        
-                  
+span {
+  font-size: 10px;
+}
+
+.form-popup a {
+  text-decoration: none;
+  color: #39db34;
+  font-weight: bold;
+}
+
+.form-popup a:hover {
+  text-decoration: underline;
+}
+
+.form-container {
+  max-width: 100%;
+  height: 100%;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 13px;
+  margin: 0px 0 0px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #39ff14;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  margin: 0px 0px 10px 0px;
+  opacity: 0.8;
+}
