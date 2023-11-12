@@ -14,8 +14,6 @@ export class LoginComponent {
 
   public user: User = new User();
 
-  /*private email: string = " ";*/
-
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router, private validationService: ValidationsService) {};
   
   private emailPattern: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -48,9 +46,7 @@ public getFieldError(field: string): string | null{
     else{
       alert("No existe el usuario");
     }
-  }
-
- 
+  } 
 
   public navigateToRegister(){
     this.router.navigate(['/register']);

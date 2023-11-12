@@ -1,3 +1,5 @@
+/* Banner */
+
 #banner {
   position: relative;
   margin-top: 50px;
@@ -42,7 +44,7 @@
   background-color: rgba(51, 51, 51, 0.3);
 }
 
-/*Servicios*/
+/*Services*/
 
 #services .contenedor {
   display: flex;
@@ -95,13 +97,12 @@
 
 .open-button {
   display: flex;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #2af507;
   color: black;
   font-weight: bold;
   padding: 10px 20px;
   border: none;
-  /*border: 1px  #2af507;*/
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
@@ -127,7 +128,6 @@
   padding: 50px 50px;
 }
 
-/* Add styles to the form container */
 .form-container {
   max-width: 500px;
   padding: 10px;
@@ -135,7 +135,6 @@
   height: 380px;
 }
 
-/* Full-width input fields */
 .form-container input[type="text"],
 .form-container input[type="password"] {
   width: 100%;
@@ -145,14 +144,12 @@
   background: #f1f1f1;
 }
 
-/* When the inputs get focus, do something */
 .form-container input[type="text"]:focus,
 .form-container input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
 }
 
-/* Set a style for the submit/login button */
 .form-container .btn {
   background-color: #39ff14;
   color: white;
@@ -165,12 +162,10 @@
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: rgba(51, 51, 51, 0.9);
 }
 
-/* Add some hover effects to buttons */
 .form-container .btn:hover,
 .open-button:hover {
   opacity: 1;

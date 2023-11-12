@@ -25,7 +25,6 @@ import { AddUserComponent } from './add-user/add-user.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    //Faltaba importar el HttpClient para poder pegarle a la API, sino te devolvia error por consola -> NullInjectorError: No provider for HttpClient!
     HttpClientModule,
     FormsModule,
     SharedModule,
