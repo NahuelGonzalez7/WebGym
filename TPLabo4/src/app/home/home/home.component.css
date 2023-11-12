@@ -1,0 +1,13 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#excerciseContainer {
+  margin-top: 3%;
+  flex: 1;
+}

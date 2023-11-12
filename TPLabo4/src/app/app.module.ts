@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeModule } from './home/home.module';
 import { RegisterComponent } from './register/register.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AddUserComponent } from './add-user/add-user.component';
     FormsModule,
     SharedModule,
     HomeModule,
+    NoopAnimationsModule,
     ReactiveFormsModule
   ],
 
