@@ -16,13 +16,21 @@
             font-size: 15px;
             justify-content: center;
           }
+
+          .submit-button:disabled{
+         
+            background-color:  rgba(211,211,211, 0.4);
+          }
           
           .submit-button {
-            margin-top: 0px;
+            margin-top: 45px;
             width: 100%;
             border-radius: 5%;
+               background-color: #39db34;
+               
           }
-
+          
+      
           .open-button:hover {
           background-color: rgba(51,51,51,0.5);
           color:#fff;
@@ -42,26 +50,9 @@
             padding: 25px 60px;
 
           }
-         
-          /*
-          .form-container input[type=text],.form-container input[type=password]{
-            width: 100%;
-            padding: 13px;
-            border: none;
-            background: #f1f1f1;
-          
-          }*/
-          
-          /* When the inputs get focus, do something 
-          .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-            background-color: #ddd;
-            outline: none;
-          }*/
-
 
            span{
           font-size: 10px;
-            margin-top: 0px;
          }        
         
           /* Se agregaron estilos para el enlace de registro */
@@ -75,61 +66,18 @@
           .form-popup a:hover {
             text-decoration: underline;
           }
-
-  
-      /*repe*/
-
-        /*Form*/
-
-        .open-button {
-            display: flex;
-            background-color: rgba(211,211,211, 0.4);
-            color:black;
-            font-weight: bold;
-            padding: 10px 20px;
-            border: 1px solid #555;
-            border-radius: 20px;
-            cursor: pointer;
-            text-align: center; 
-            bottom: 100px;
-            width: 115px;
-            font-size: 15px;
-            justify-content: center;
-          }
-          
-          .open-button:hover {
-          background-color: rgba(51,51,51,0.5);
-          color:#fff;
-          
-          }
-          
-         /*
-          .form-popup {
-         
-            position: fixed;
-            left: 120px;
-            bottom: 0px;
-            border: 3px solid #f1f1f1;
-            z-index: 9;
-            height: 300px;
-            width: 320px;
-            background-color: rgba(51,51,51,0.9);
-            padding: 25px 60px;
-
-          }*/
           
           /* Add styles to the form container */
           .form-container {
             max-width: 100%;
-            padding: 10px;
             height: 100%;
           }
           
           /* Full-width input fields */
-          .form-container input[type=text], .form-container input[type=password] {
+          .form-container input[type=text], .form-container input[type=password]{
             width: 100%;
             padding: 13px;
-            margin: 0px 0 10px 0;
+            margin: 0px 0 0px 0;
             border: none;
             background: #f1f1f1;
           }
@@ -154,30 +102,5 @@
             opacity: 0.8;
           }
           
-          /* Add a red background color to the cancel button
-          .form-container .cancel {
-            background-color: rgba(51,51,51,0.9);
-          
-          } */
-          
-          /* Add some hover effects to buttons 
-          .form-container .btn:hover, .open-button:hover {
-            opacity: 1;
-          }*/
-          
-          /* Se agregaron estilos para el enlace de registro 
-          
-          .form-popup a {
-            text-decoration: none;
-            color: #39db34;
-            font-weight: bold;
-          }
-
-          .form-popup a:hover {
-            text-decoration: underline;
-          }*/
-
-                    
-                  
-                    
+        
                   
