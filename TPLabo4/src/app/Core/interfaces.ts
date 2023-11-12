@@ -1,5 +1,8 @@
-export interface Iuser{
+export interface Ipersona {
     id: number | null;
+    nombre: string;
+    apellido: string;
+    edad: number | null;
     email: string;
     password: string;
     favouriteExcercise: IfavouriteExcercise[];
@@ -11,6 +14,7 @@ export interface IfavouriteExcercise{
     excerciseID: number;
     isFavourite: boolean;
 }
+
 
 export interface Iexcercise {
     id: number | null;

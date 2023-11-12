@@ -36,6 +36,46 @@
           "isFavourite": true
         }
       ]
+    },
+    {
+      "id": 4,
+      "email": "agostina@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 5,
+      "email": "agos@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 6,
+      "nombre": "Milagros",
+      "apellido": "Pecar",
+      "edad": "31",
+      "peso": "63",
+      "altura": "1.73",
+      "email": "m@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 7,
+      "nombre": "m",
+      "apellido": "p",
+      "edad": "10",
+      "peso": "1",
+      "altura": "12",
+      "email": "mm@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 8,
+      "nombre": "",
+      "apellido": "",
+      "edad": null,
+      "peso": null,
+      "altura": null,
+      "email": "",
+      "password": ""
     }
   ],
   "routines": {

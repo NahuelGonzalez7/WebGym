@@ -7,6 +7,8 @@ import { SharedModule } from '../shared/shared.module';
 import { ViewEjerciciosComponent } from './view-ejercicios/view-ejercicios.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from '../components/login/login.component';
 
 
 @NgModule({
@@ -19,7 +21,11 @@ import {MatButtonModule} from '@angular/material/button';
     HomeRoutingModule,
     SharedModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    ReactiveFormsModule,
   ]
 })
 export class HomeModule { }
