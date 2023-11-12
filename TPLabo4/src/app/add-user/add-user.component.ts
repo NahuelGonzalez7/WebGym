@@ -26,7 +26,7 @@ export class AddUserComponent{
     apellido: new FormControl(" ", [Validators.required, Validators.maxLength(10)]),
     edad: new FormControl(" ", [Validators.required, Validators.maxLength(3)]),
     peso: new FormControl(" ", [Validators.required, Validators.maxLength(3)]),
-    altura: new FormControl(" ", [Validators.required]),
+    altura: new FormControl(" ", [Validators.required, Validators.maxLength(3)]),
     email: new FormControl(" ",[Validators.required, Validators.pattern(this.emailPattern)]),
     password: new FormControl(" ", [Validators.required, Validators.minLength(5)])
 
