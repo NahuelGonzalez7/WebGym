@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, map, of } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Observable, map } from 'rxjs';
 
 import { Excercise, Routine, User } from './models';
 /*import { FormGroup } from '@angular/forms';*/
@@ -20,9 +20,8 @@ export class ApiService {
   }
 
   getUserToAuth(email: string, password: string): Observable<User[]> {
-    return this.http.get<User[]>(
-      `${this.baseURL}/users?email=${email}&password=${password}`
-    );
+    return this.http.get<User[]>(`${this.baseURL}/users?email=${email}&password=${password}`);
+  }  
 
 addUser(createUser: User): Observable<boolean> {
     const url = `${this.baseURL}/users`;
@@ -47,8 +46,7 @@ addUser(createUser: User): Observable<boolean> {
 
   //#region Routines Methods
 
-  /**
-   * Fetches a list of routines from the server.
+  /** Fetches a list of routines from the server.
    *
    * @returns An observable that emits an array of Routine objects.
    */
@@ -61,8 +59,7 @@ addUser(createUser: User): Observable<boolean> {
     );
   }
 
-  /**
-   * Fetches a list of routines for a specific day from the server.
+  /** Fetches a list of routines for a specific day from the server.
    *
    * @param day - The day of the week for which routines are requested.
    * @returns An observable that emits an array of Routine objects for the specified day.
