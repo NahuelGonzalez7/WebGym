@@ -1,34 +1,36 @@
 
-import { Edays, Iexcercise, Iroutine as Iroutine, Iuser } from "./interfaces";
+import { Iexcercise, IfavouriteExcercise, Iuser } from "./interfaces";
 
 
 export class User implements Iuser{
-  id: number | null= null;
+  id: number | null;
   email: string = '';
   password: string = '';
- 
+  favouriteExcercise: IfavouriteExcercise[] = [];
 
   constructor(user?:any){
     this.id = user == undefined ? null : user.id;
     this.email =  user == undefined ? '' : user.email;
     this.password =  user == undefined ? '' : user.password;
+    this.favouriteExcercise = user == undefined ? [] : user.favouriteExcercise;
   }
 }
 
-export class Routine implements Iroutine{
+export class FavouriteExcercise implements IfavouriteExcercise{
   id: number | null;
-  days: Edays;
- 
+  excerciseID: number;
+  isFavourite: boolean;
 
-  constructor(routine?:any){
-    this.id = routine == undefined ? null : routine.id;
-    this.days = routine == undefined ? [] : routine.days;
+  constructor(favExcercise?:any){
+    this.id = favExcercise == undefined ? null : favExcercise.id;
+    this.excerciseID = favExcercise == undefined ? null : favExcercise.excerciseID;
+    this.isFavourite = favExcercise == undefined ? false : favExcercise.isFavourite;
   }
 }
 
 
 export class Excercise implements Iexcercise {
-  id: number | null;
+  id: number;
   excercise: string;
   description: string;
   repetitions: number;

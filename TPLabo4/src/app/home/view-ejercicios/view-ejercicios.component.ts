@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { ApiService } from 'src/app/Core/api.service';
-import { Excercise, Routine } from 'src/app/Core/models';
+import { Excercise, FavouriteExcercise } from 'src/app/Core/models';
 
 @Component({
   selector: 'app-view-ejercicios',
@@ -13,7 +13,7 @@ export class ViewEjerciciosComponent implements OnInit, AfterViewInit{
   public dayOftheweek: string  = "martes";
   @ViewChild('heartButton') heartButton !:ElementRef<HTMLElement>;
 
-  public routines: Routine[] = [];
+  public routines: FavouriteExcercise[] = [];
   public excercises: Excercise[] = [];
 
   constructor(private apiService: ApiService) {}
@@ -22,6 +22,8 @@ export class ViewEjerciciosComponent implements OnInit, AfterViewInit{
     // this.getRoutines();
     this.getRoutineByDay(this.dayOftheweek);
     this.getExcercises();
+    this.apiService.isExcerciseFavourite(1).subscribe(resp => {console.log(resp)});
+    this.apiService.getFavouriteExcercises().subscribe(resp=>{console.log("favourite excercises",resp)});
   }
 
   ngAfterViewInit(): void {
@@ -67,6 +69,12 @@ export class ViewEjerciciosComponent implements OnInit, AfterViewInit{
     });
   }
 
+
+  addExcerciseToFavourite(excerciseID: number){
+    this.apiService.addExcerciseToFavourite(excerciseID).subscribe(resp => {
+      console.log(resp);
+    });
+  }
 
   onLikeClick() {
     // TODO: Implement like button functionality here
