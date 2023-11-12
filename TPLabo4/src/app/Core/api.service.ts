@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of } from 'rxjs';
+
 import { Excercise, Routine, User } from './models';
+/*import { FormGroup } from '@angular/forms';*/
 
 @Injectable({
   providedIn: 'root',
@@ -21,16 +23,12 @@ export class ApiService {
     return this.http.get<User[]>(
       `${this.baseURL}/users?email=${email}&password=${password}`
     );
-  }
-  /*
-  getPersons(): Observable<Person[]>{
-    return this.http.get<Person[]>(`${this.baseURL}/persons`);
-  }*/
 
-  addUser(createUser: User): Observable<boolean> {
+addUser(createUser: User): Observable<boolean> {
     const url = `${this.baseURL}/users`;
     return this.http.post<boolean>(url, createUser);
   }
+  
 /*
   editPerson(id: number, updatePerson: Person): Observable<boolean> {
     const url = `${this.baseURL}/persons/${id}`;

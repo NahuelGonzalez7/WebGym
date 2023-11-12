@@ -1,5 +1,8 @@
-export interface Iuser{
+export interface Ipersona {
     id: number | null;
+    nombre: string;
+    apellido: string;
+    edad: number | null;
     email: string;
     password: string;
 }
@@ -9,6 +12,7 @@ export interface Iroutine{
     id: number | null;
     days: Edays;
 }
+
 
 export interface Iexcercise {
     id: number | null;

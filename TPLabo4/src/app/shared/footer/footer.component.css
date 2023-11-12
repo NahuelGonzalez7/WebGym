@@ -1,9 +1,14 @@
 .navbar {
   background-color: rgba(0, 0, 0, 0.938);
   overflow: hidden;
-  bottom: 0px;
+  bottom: 0;
   max-height: 45px;
   width: 100%;
+}
+
+
+ul {
+  margin-top: -7px;
 }
 
 /* Style the links inside the navigation bar */

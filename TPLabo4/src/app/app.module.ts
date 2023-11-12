@@ -9,7 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeModule } from './home/home.module';
 import { RegisterComponent } from './register/register.component';
 import { AddUserComponent } from './add-user/add-user.component';
@@ -31,8 +31,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     SharedModule,
     HomeModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    ReactiveFormsModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
   })
