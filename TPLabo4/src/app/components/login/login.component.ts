@@ -13,15 +13,17 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 export class LoginComponent {
 
   public user: User = new User();
+
   /*private email: string = " ";*/
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router, private validationService: ValidationsService) {};
   
-  private emailPattern: RegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
+  private emailPattern: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  
+  
   loginForm: FormGroup = this.fb.group({
     email: new FormControl(" ",[Validators.required, Validators.pattern(this.emailPattern)]),
-    password: new FormControl(" ", [Validators.required, Validators.minLength(7)])
+    password: new FormControl(" ", [Validators.required, Validators.minLength(5)])
 
   })
 
@@ -39,7 +41,7 @@ public getFieldError(field: string): string | null{
  public async checkAuth(){
     console.log("Hola entre");
     const check = this.authService.checkAuth(this.user.email, this.user.password);
-
+    
     if(await check){
       this.router.navigate(['/home']);
     }
@@ -47,7 +49,9 @@ public getFieldError(field: string): string | null{
       alert("No existe el usuario");
     }
   }
-/*se agrego */
+
+ 
+
   public navigateToRegister(){
     this.router.navigate(['/register']);
   }

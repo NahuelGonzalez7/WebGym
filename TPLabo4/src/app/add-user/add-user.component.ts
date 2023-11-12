@@ -22,13 +22,13 @@ export class AddUserComponent{
   private emailPattern: RegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   loginForm: FormGroup = this.fb.group({
-    nombre: new FormControl(" ", [Validators.required, Validators.maxLength(50)]),
-    apellido: new FormControl(" ", [Validators.required, Validators.maxLength(50)]),
-    edad: new FormControl(" ", [Validators.required]),
-    peso: new FormControl(" ", [Validators.required]),
+    nombre: new FormControl(" ", [Validators.required, Validators.maxLength(10)]),
+    apellido: new FormControl(" ", [Validators.required, Validators.maxLength(10)]),
+    edad: new FormControl(" ", [Validators.required, Validators.maxLength(3)]),
+    peso: new FormControl(" ", [Validators.required, Validators.maxLength(3)]),
     altura: new FormControl(" ", [Validators.required]),
     email: new FormControl(" ",[Validators.required, Validators.pattern(this.emailPattern)]),
-    password: new FormControl(" ", [Validators.required, Validators.minLength(7)])
+    password: new FormControl(" ", [Validators.required, Validators.minLength(5)])
 
   })
 
