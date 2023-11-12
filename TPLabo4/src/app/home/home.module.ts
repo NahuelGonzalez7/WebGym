@@ -5,6 +5,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { ViewEjerciciosComponent } from './view-ejercicios/view-ejercicios.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from '../components/login/login.component';
 
@@ -18,6 +20,8 @@ import { LoginComponent } from '../components/login/login.component';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
+    MatCardModule,
+    MatButtonModule,
     ReactiveFormsModule
   ],
   exports: [

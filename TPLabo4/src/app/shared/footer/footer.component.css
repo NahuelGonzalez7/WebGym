@@ -6,13 +6,14 @@
   width: 100%;
 }
 
+
 ul {
   margin-top: -7px;
 }
 
 /* Style the links inside the navigation bar */
 
-.navbar a {
+#footerContainer a {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -45,3 +46,17 @@ ul {
 .navbar .icon {
   display: none;
 }
+
+/* FOOTER STYLES */
+#footerContainer {
+  background-color: rgba(0, 0, 0, 0.938);
+  overflow: hidden;
+  max-height: 45px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* FOOTER STYLES */
