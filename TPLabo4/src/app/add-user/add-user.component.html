@@ -23,7 +23,7 @@
       <div class="form-field">
         <label for="edad">Edad *</label>
         <br>
-        <input type="number" formControlName="edad" placeholder = "Ingrese su edad" [(ngModel)]="newUser.edad" required>
+        <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'')" formControlName="edad" placeholder = "Ingrese su edad" [(ngModel)]="newUser.edad" required>
       </div>
       <span *ngIf="isValidField('edad')" class="error-message">
         {{getFieldError("edad")}}
@@ -32,7 +32,7 @@
       <div class="form-field">
         <label for="peso">Peso *</label>
         <br>
-        <input type="number" formControlName="peso" placeholder = "Ingrese su peso" [(ngModel)]="newUser.peso" required>
+        <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'')" formControlName="peso" placeholder = "Ingrese su peso" [(ngModel)]="newUser.peso" required>
       </div>
       <span *ngIf="isValidField('peso')" class="error-message">
         {{getFieldError("peso")}}
@@ -41,7 +41,7 @@
       <div class="form-field">
         <label for="altura">Altura *</label>
         <br>
-        <input type="number" formControlName="altura" placeholder = "Ingrese su altura" [(ngModel)]="newUser.altura" required>
+        <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'')" formControlName="altura" placeholder = "Ingrese su altura" [(ngModel)]="newUser.altura" required>
       </div>
       <span *ngIf="isValidField('altura')" class="error-message">
         {{getFieldError("altura")}}

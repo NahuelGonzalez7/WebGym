@@ -25,13 +25,11 @@ export class ValidationsService {
         case 'required':
           return "Este campo es requerido";
   
-          case 'minlength': /*se reemplazo la "L" por "l" en ambos casos, sino no andaba*/
+          case 'minlength':
             return `Mínimo ${errors['minlength'].requiredLength} caracteres.`;
-
             
           case 'maxlength':
           return `Máximo ${errors['maxlength'].requiredLength} caracteres.`;
-
 
           case 'pattern':
             return "Formato de correo electrónico invalido";  
