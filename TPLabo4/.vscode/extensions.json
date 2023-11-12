@@ -1,4 +1,5 @@
 {
+  // Con alt + shift + o -> borran los imports que no se usan y se ordenan
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
   "recommendations": [
     "angular.ng-template",
