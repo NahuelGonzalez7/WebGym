@@ -4,6 +4,7 @@ import { AuthService} from 'src/app/Core/auth.service';
 import { ValidationsService } from 'src/app/Core/validations.service';
 import { User } from 'src/app/Core/models';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -44,7 +45,13 @@ public getFieldError(field: string): string | null{
       this.router.navigate(['/home']);
     }
     else{
-      alert("No existe el usuario");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "No se encontro el usuario"
+      });
+      /*
+      alert("No existe el usuario");*/
     }
   } 
 

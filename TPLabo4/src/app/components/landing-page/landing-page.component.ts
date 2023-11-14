@@ -16,6 +16,13 @@ export class LandingPageComponent {
   
   constructor() {}
 
+
+/**
+ * @method vistaForm: Checks the validity of a specified field in the login form.
+ * @returns void
+ * This method is used to show or hide a form.
+ */
+
   vistaForm(){
     this.mostrar = !this.mostrar;
   } 
