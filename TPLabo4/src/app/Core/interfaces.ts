@@ -5,18 +5,19 @@ export interface Ipersona {
     edad: number | null;
     email: string;
     password: string;
-    favouriteExcercise: IfavouriteExcercise[];
+    favouriteExercise: IfavouriteExercise[];
 }
 
 
-export interface IfavouriteExcercise{
+export interface IfavouriteExercise{
     id: number | null;
-    excerciseID: number;
-    isFavourite: boolean;
+    // userID: number;
+    exerciseID: number;
+    // isFavourite: boolean;
 }
 
 
-export interface Iexcercise {
+export interface Iexercise {
     id: number | null;
     excercise: string;
     description: string;
@@ -24,7 +25,7 @@ export interface Iexcercise {
     series: number;
     //ToDo agregar tipo de ejercicio
     //tipo de ejercicio tambien estaria muy bueno que sea un enum para manejar el filtro 
-    excerciseType: string;
+    exerciseType: string;
 }
 
 //ToDo agregar enums

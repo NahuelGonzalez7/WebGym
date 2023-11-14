@@ -1,5 +1,5 @@
 
-import { Iexcercise, IfavouriteExcercise, Ipersona } from "./interfaces";
+import { Iexercise, IfavouriteExercise, Ipersona } from "./interfaces";
 
 
 
@@ -14,7 +14,7 @@ export class User implements Ipersona {
   password: string;  
   peso: number | null;
   altura: number | null;
-  favouriteExcercise: IfavouriteExcercise[] = [];
+  favouriteExercise: IfavouriteExercise[] = [];
 
   constructor(user?:any){
 
@@ -26,31 +26,33 @@ export class User implements Ipersona {
     this.altura = user == undefined ? null : user.altura;
     this.email =  user == undefined ? '' : user.email;
     this.password =  user == undefined ? '' : user.password;
-    this.favouriteExcercise = user == undefined ? [] : user.favouriteExcercise;
+    this.favouriteExercise = user == undefined ? [] : user.favouriteExcercise;
   }
 }
 
 
-export class FavouriteExcercise implements IfavouriteExcercise{
+export class FavouriteExercise implements IfavouriteExercise{
   id: number | null;
-  excerciseID: number;
-  isFavourite: boolean;
+  // userID: number;
+  exerciseID: number;
+  // isFavourite: boolean;
 
-  constructor(favExcercise?:any){
-    this.id = favExcercise == undefined ? null : favExcercise.id;
-    this.excerciseID = favExcercise == undefined ? null : favExcercise.excerciseID;
-    this.isFavourite = favExcercise == undefined ? false : favExcercise.isFavourite;
+  constructor(favExercise?:any){
+    this.id = favExercise == undefined ? null : favExercise.id;
+    // this.userID = favExcercise == undefined ? null : favExcercise.userID;
+    this.exerciseID = favExercise == undefined ? null : favExercise.exerciseID;
+    // this.isFavourite = favExercise == undefined ? false : favExercise.isFavourite;
   }
 }
 
 
-export class Excercise implements Iexcercise {
+export class Excercise implements Iexercise {
   id: number;
   excercise: string;
   description: string;
   repetitions: number;
   series: number;
-  excerciseType: string;
+  exerciseType: string;
 
   constructor(excercise?:any){
     this.id = excercise == undefined ? null : excercise.id;
@@ -58,7 +60,7 @@ export class Excercise implements Iexcercise {
     this.description = excercise == undefined ? '' : excercise.description;
     this.repetitions = excercise == undefined ? null : excercise.repetitions;
     this.series = excercise == undefined ? null : excercise.series;
-    this.excerciseType = excercise == undefined ? null : excercise.excerciseType;
+    this.exerciseType = excercise == undefined ? null : excercise.excerciseType;
   }
 }
 
