@@ -15,34 +15,57 @@ export class ApiService {
 
   //#region Users Methods
 
+  /**
+   * @method getUsers: Retrieves a list of users from the server. 
+   * This method sends an HTTP GET request to the server to fetch a list of users.
+   * @returns {Observable<User[]>} An observable of an array of User objects representing the users.
+   * @throws {Error} If the HTTP request fails or encounters an error.
+   */
+
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${this.baseURL}/users`);
   }
+
+/**
+   * @method getUserToAuth: Retrieves user information for authentication.This method sends an HTTP GET request to the server to fetch user information
+   * based on the provided email and password.
+   * @param {string} email - The email address of the user.
+   * @param {string} password - The password of the user.
+   * @returns {Observable<User[]>} An observable of an array of User objects representing the authenticated user.
+   * @throws {Error} If the HTTP request fails or encounters an error.
+   */
 
   getUserToAuth(email: string, password: string): Observable<User[]> {
     return this.http.get<User[]>(`${this.baseURL}/users?email=${email}&password=${password}`);
   }  
 
-addUser(createUser: User): Observable<boolean> {
+  /**
+   * @method addUser: Adds a new user to the system. This method sends an HTTP POST request to the server to create a new user.
+   * @param {User} createUser - The user object containing information for creating the new user.
+   * @returns {Observable<boolean>} An observable indicating whether the user creation was successful (true) or not (false).
+   * @throws {Error} If the HTTP request fails or encounters an error.
+   */
+
+  addUser(createUser: User): Observable<boolean> {
     const url = `${this.baseURL}/users`;
     return this.http.post<boolean>(url, createUser);
   }
   
-/*
-  editPerson(id: number, updatePerson: Person): Observable<boolean> {
-    const url = `${this.baseURL}/persons/${id}`;
-    return this.http.put<boolean>(url, updatePerson);
-  }
 
-  deletePerson(id: number): Observable<boolean> {
-    return this.http.delete(`${this.baseURL}/persons/${id}`)
-    .pipe(
-      map(resp => true), // Si sale bien retorna true. Recibir un response significa que salio bien
-      catchError(error => of(false)) // Si hay algun error en la solicitud me regresa falso
-    );
-  }*/
+  /**
+   * @method duplicateEmail: Checks if an email address already exists in the system. 
+   * This method sends an HTTP GET request to the server to check if a user with the provided email address already exists.
+   * @param {string} email - The email address to check for duplication.
+   * @returns {Observable<User[]>} An observable of an array of User objects representing users with the provided email.
+   * @throws {Error} If the HTTP request fails or encounters an error.
+   */
+
+  duplicateEmail(email: string): Observable<User[]> {
+    return this.http.get<User[]>(`${this.baseURL}/users?email=${email}`);
+  }  
 
   //#endregion
+  
 
   //#region Routines Methods
 
