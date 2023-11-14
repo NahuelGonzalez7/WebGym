@@ -1,20 +1,25 @@
 <div>
-  <h2>Plan semanal</h2>
+  <div style="display: flex;align-items: center;">
+    <h2>Plan semanal</h2>
+    <mat-slide-toggle> Favoritos </mat-slide-toggle>
+  </div>
   <div id="cardsContainer">
-   <ul *ngFor="let excercise of excercises" style="max-width: 20%; margin-right: 1%;">
-    <li>
-      <mat-card class="example-card" style="border: 1px solid black;">
-        <mat-card-header style="display: block;">
-          <mat-card-title style="display: flex;justify-content: space-between;">{{excercise.excercise}} 
-            <button class="heart-button" (click)="addExcerciseToFavourite(excercise.id)"> <i class="fas fa-heart"></i> </button>
-          </mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p> {{excercise.description}} </p>
-        </mat-card-content>
-      </mat-card>
-    </li>
-   </ul>
+    <ul *ngFor="let excercise of excercises" style="max-width: 20%; margin-right: 1%;">
+      <li>
+        <mat-card class="example-card" style="border: 1px solid black;">
+          <mat-card-header style="display: block;">
+            <mat-card-title style="display: flex;justify-content: space-between;">{{excercise.excercise}}
+              <button class="heart-button" (click)="addExcerciseToFavourite(2,excercise.id)"> <i class="fas fa-heart"></i>
+              </button>
+            </mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p> {{excercise.description}} </p>
+          </mat-card-content>
+        </mat-card>
+      </li>
+    </ul>
   </div>
 </div>
