@@ -22,6 +22,7 @@ export interface Iexcercise {
     series: number;
     //tipo de ejercicio tambien estaria muy bueno que sea un enum para manejar el filtro 
     excerciseType: string;
+    imageURL: string;
 }
 
 

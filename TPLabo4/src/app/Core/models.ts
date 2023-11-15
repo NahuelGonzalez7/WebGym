@@ -45,6 +45,7 @@ export class Excercise implements Iexcercise {
   repetitions: number;
   series: number;
   excerciseType: string;
+  imageURL: string;
 
   constructor(excercise?:any){
     this.id = excercise == undefined ? null : excercise.id;
@@ -53,6 +54,8 @@ export class Excercise implements Iexcercise {
     this.repetitions = excercise == undefined ? null : excercise.repetitions;
     this.series = excercise == undefined ? null : excercise.series;
     this.excerciseType = excercise == undefined ? null : excercise.excerciseType;
+    this.imageURL = excercise == undefined ? null : excercise.imageURL;
+    
   }
 }
 
