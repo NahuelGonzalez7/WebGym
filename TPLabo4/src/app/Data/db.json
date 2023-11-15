@@ -195,126 +195,160 @@
             "description": "Siéntese en una colchoneta, sus pantorrillas descansan en un banco, las rodillas forman un ángulo recto. Mantenga sus manos detrás de su cuello. Sube ahora con un movimiento de balanceo de tu espalda, debes sentir cómo las vértebras individuales pierden contacto con la colchoneta. En el punto más alto, contrae los abdominales tanto como puedas y mantenlos allí durante 2 segundos. Baja ahora, desenrollando tu espalda.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "cardio"
+            "excerciseType": "cardio",
+            "imageURL": "assets/Ejercicios/abs.jpg"
         },
         {
-            "excercise": "Biceps concentrado",
+            "excercise": "Curl de biceps con mancuernas",
             "description": "El curl de concentración es un ejercicio clásico para desarrollar los bíceps un brazo a la vez. Se puede realizar inclinado o de rodillas, pero se realiza más a menudo sentado en un banco. Es excelente para enfatizar el pico del bíceps y, a menudo, se usa para terminar un entrenamiento de bíceps.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "otro"
+            "excerciseType": "otro",
+            "imageURL": "assets/Ejercicios/biceps.jpg"
         },
         {
-            "excercise": "Curl cuadriceps",
-            "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas. El ejercicio se realiza utilizando una máquina llamada Leg Extension Machine. Hay varios fabricantes de estas máquinas y cada uno es ligeramente diferente. La mayoría de los gimnasios y salas de pesas tendrán la máquina en sus instalaciones. La extensión de piernas es un ejercicio aislado dirigido a un grupo muscular específico, los cuádriceps. No debe considerarse como un entrenamiento total de piernas, como la sentadilla o el peso muerto. El ejercicio consiste en doblar la pierna a la altura de la rodilla y extender las piernas, para luego volver a bajarlas a la posición original.",
+            "excercise": "Sentadilla",
+            "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "nada"            
+            "excerciseType": "nada",
+            "imageURL": "assets/Ejercicios/sentadilla.jpg"            
         },
         {
-            "excercise": "Abdominales",
+            "excercise": "Flexiones",
             "description": "Siéntese en una colchoneta, sus pantorrillas descansan en un banco, las rodillas forman un ángulo recto. Mantenga sus manos detrás de su cuello. Sube ahora con un movimiento de balanceo de tu espalda, debes sentir cómo las vértebras individuales pierden contacto con la colchoneta. En el punto más alto, contrae los abdominales tanto como puedas y mantenlos allí durante 2 segundos. Baja ahora, desenrollando tu espalda.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "cardio"
+            "excerciseType": "Sentadilla con barra",
+            "imageURL": "assets/Ejercicios/flexiones.jpg"
         },
         {
-            "excercise": "Biceps concentrado",
+            "excercise": "Peso muerto",
             "description": "El curl de concentración es un ejercicio clásico para desarrollar los bíceps un brazo a la vez. Se puede realizar inclinado o de rodillas, pero se realiza más a menudo sentado en un banco. Es excelente para enfatizar el pico del bíceps y, a menudo, se usa para terminar un entrenamiento de bíceps.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "otro"
+            "excerciseType": "otro",
+            "imageURL": "assets/Ejercicios/pesomuerto.jpg"
         },
         {
-            "excercise": "Curl cuadriceps",
-            "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas. El ejercicio se realiza utilizando una máquina llamada Leg Extension Machine. Hay varios fabricantes de estas máquinas y cada uno es ligeramente diferente. La mayoría de los gimnasios y salas de pesas tendrán la máquina en sus instalaciones. La extensión de piernas es un ejercicio aislado dirigido a un grupo muscular específico, los cuádriceps. No debe considerarse como un entrenamiento total de piernas, como la sentadilla o el peso muerto. El ejercicio consiste en doblar la pierna a la altura de la rodilla y extender las piernas, para luego volver a bajarlas a la posición original.",
+            "excercise": "Sentadilla con barra",
+            "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "nada"            
+            "excerciseType": "nada",
+            "imageURL": "assets/Ejercicios/sentadillabarra.jpg"           
         },
         {
-            "excercise": "Abdominales",
+            "excercise": "Plancha",
             "description": "Siéntese en una colchoneta, sus pantorrillas descansan en un banco, las rodillas forman un ángulo recto. Mantenga sus manos detrás de su cuello. Sube ahora con un movimiento de balanceo de tu espalda, debes sentir cómo las vértebras individuales pierden contacto con la colchoneta. En el punto más alto, contrae los abdominales tanto como puedas y mantenlos allí durante 2 segundos. Baja ahora, desenrollando tu espalda.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "cardio"
+            "excerciseType": "cardio",
+            "imageURL": "assets/Ejercicios/plancha.jpg"
         },
         {
-            "excercise": "Biceps concentrado",
+            "excercise": "Extensiones de tríceps",
             "description": "El curl de concentración es un ejercicio clásico para desarrollar los bíceps un brazo a la vez. Se puede realizar inclinado o de rodillas, pero se realiza más a menudo sentado en un banco. Es excelente para enfatizar el pico del bíceps y, a menudo, se usa para terminar un entrenamiento de bíceps.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "otro"
+            "excerciseType": "otro",
+            "imageURL": "assets/Ejercicios/triceps.jpg"
         },
         {
-            "excercise": "Curl cuadriceps",
+            "excercise": "Estocada",
             "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas. El ejercicio se realiza utilizando una máquina llamada Leg Extension Machine. Hay varios fabricantes de estas máquinas y cada uno es ligeramente diferente. La mayoría de los gimnasios y salas de pesas tendrán la máquina en sus instalaciones. La extensión de piernas es un ejercicio aislado dirigido a un grupo muscular específico, los cuádriceps. No debe considerarse como un entrenamiento total de piernas, como la sentadilla o el peso muerto. El ejercicio consiste en doblar la pierna a la altura de la rodilla y extender las piernas, para luego volver a bajarlas a la posición original.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "nada"            
+            "excerciseType": "nada",
+            "imageURL": "assets/Ejercicios/estocada.jpg"          
         },
         {
-            "excercise": "Abdominales",
+            "excercise": "Polea al pecho",
             "description": "Siéntese en una colchoneta, sus pantorrillas descansan en un banco, las rodillas forman un ángulo recto. Mantenga sus manos detrás de su cuello. Sube ahora con un movimiento de balanceo de tu espalda, debes sentir cómo las vértebras individuales pierden contacto con la colchoneta. En el punto más alto, contrae los abdominales tanto como puedas y mantenlos allí durante 2 segundos. Baja ahora, desenrollando tu espalda.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "cardio"
+            "excerciseType": "cardio",
+            "imageURL": "assets/Ejercicios/poleapecho.jpg"
         },
         {
-            "excercise": "Biceps concentrado",
+            "excercise": "Remo horizontal con mancuerna",
             "description": "El curl de concentración es un ejercicio clásico para desarrollar los bíceps un brazo a la vez. Se puede realizar inclinado o de rodillas, pero se realiza más a menudo sentado en un banco. Es excelente para enfatizar el pico del bíceps y, a menudo, se usa para terminar un entrenamiento de bíceps.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "otro"
+            "excerciseType": "otro",
+            "imageURL": "assets/Ejercicios/remohorizontal.jpg"
         },
         {
-            "excercise": "Curl cuadriceps",
+            "excercise": "Puente lateral",
             "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas. El ejercicio se realiza utilizando una máquina llamada Leg Extension Machine. Hay varios fabricantes de estas máquinas y cada uno es ligeramente diferente. La mayoría de los gimnasios y salas de pesas tendrán la máquina en sus instalaciones. La extensión de piernas es un ejercicio aislado dirigido a un grupo muscular específico, los cuádriceps. No debe considerarse como un entrenamiento total de piernas, como la sentadilla o el peso muerto. El ejercicio consiste en doblar la pierna a la altura de la rodilla y extender las piernas, para luego volver a bajarlas a la posición original.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "nada"            
+            "excerciseType": "nada",
+            "imageURL": "assets/Ejercicios/puentelateral.jpg"
         },
         {
-            "excercise": "Abdominales",
+            "excercise": "Press con barra en banco plano",
             "description": "Siéntese en una colchoneta, sus pantorrillas descansan en un banco, las rodillas forman un ángulo recto. Mantenga sus manos detrás de su cuello. Sube ahora con un movimiento de balanceo de tu espalda, debes sentir cómo las vértebras individuales pierden contacto con la colchoneta. En el punto más alto, contrae los abdominales tanto como puedas y mantenlos allí durante 2 segundos. Baja ahora, desenrollando tu espalda.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "cardio"
+            "excerciseType": "cardio",
+            "imageURL": "assets/Ejercicios/presspecho.jpg"
         },
         {
-            "excercise": "Biceps concentrado",
+            "excercise": "Indoor cycle",
             "description": "El curl de concentración es un ejercicio clásico para desarrollar los bíceps un brazo a la vez. Se puede realizar inclinado o de rodillas, pero se realiza más a menudo sentado en un banco. Es excelente para enfatizar el pico del bíceps y, a menudo, se usa para terminar un entrenamiento de bíceps.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "otro"
+            "excerciseType": "otro",
+            "imageURL": "assets/Ejercicios/indoorcycle.jpg"
         },
         {
-            "excercise": "Curl cuadriceps",
+            "excercise": "Vuelo lateral de hombro",
             "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas. El ejercicio se realiza utilizando una máquina llamada Leg Extension Machine. Hay varios fabricantes de estas máquinas y cada uno es ligeramente diferente. La mayoría de los gimnasios y salas de pesas tendrán la máquina en sus instalaciones. La extensión de piernas es un ejercicio aislado dirigido a un grupo muscular específico, los cuádriceps. No debe considerarse como un entrenamiento total de piernas, como la sentadilla o el peso muerto. El ejercicio consiste en doblar la pierna a la altura de la rodilla y extender las piernas, para luego volver a bajarlas a la posición original.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "nada"            
+            "excerciseType": "nada",
+            "imageURL": "assets/Ejercicios/vuelolateral.jpg"          
         },
         {
-            "excercise": "Abdominales",
+            "excercise": "Abdominales cruzados",
             "description": "Siéntese en una colchoneta, sus pantorrillas descansan en un banco, las rodillas forman un ángulo recto. Mantenga sus manos detrás de su cuello. Sube ahora con un movimiento de balanceo de tu espalda, debes sentir cómo las vértebras individuales pierden contacto con la colchoneta. En el punto más alto, contrae los abdominales tanto como puedas y mantenlos allí durante 2 segundos. Baja ahora, desenrollando tu espalda.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "cardio"
+            "excerciseType": "cardio",
+            "imageURL": "assets/Ejercicios/abscruzado.jpg"
         },
         {
-            "excercise": "Biceps concentrado",
+            "excercise": "Patada de glúteo",
             "description": "El curl de concentración es un ejercicio clásico para desarrollar los bíceps un brazo a la vez. Se puede realizar inclinado o de rodillas, pero se realiza más a menudo sentado en un banco. Es excelente para enfatizar el pico del bíceps y, a menudo, se usa para terminar un entrenamiento de bíceps.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "otro"
+            "excerciseType": "otro",
+            "imageURL": "assets/Ejercicios/patadagluteo.jpg"
         },
         {
-            "excercise": "Curl cuadriceps",
-            "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas. El ejercicio se realiza utilizando una máquina llamada Leg Extension Machine. Hay varios fabricantes de estas máquinas y cada uno es ligeramente diferente. La mayoría de los gimnasios y salas de pesas tendrán la máquina en sus instalaciones. La extensión de piernas es un ejercicio aislado dirigido a un grupo muscular específico, los cuádriceps. No debe considerarse como un entrenamiento total de piernas, como la sentadilla o el peso muerto. El ejercicio consiste en doblar la pierna a la altura de la rodilla y extender las piernas, para luego volver a bajarlas a la posición original.",
+            "excercise": "Press de piernas",
+            "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas.",
             "repetitions": 2,
             "series": 3,
-            "excerciseType": "nada"            
+            "excerciseType": "nada",
+            "imageURL": "assets/Ejercicios/presspierna.jpg"           
+        },
+        {
+            "excercise": "Elevacion de cadera",
+            "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas.",
+            "repetitions": 2,
+            "series": 3,
+            "excerciseType": "nada",
+            "imageURL": "assets/Ejercicios/elevacioncadera.jpg"           
+        },
+        {
+            "excercise": "Peso muerto a una pierna",
+            "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas.",
+            "repetitions": 2,
+            "series": 3,
+            "excerciseType": "nada",
+            "imageURL": "assets/Ejercicios/pesomuertounapierna.jpg"           
         }
     ]
 }

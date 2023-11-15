@@ -1,48 +1,86 @@
 /* CARD STYLES */
-  .example-card {
-    max-width: 100%;
 
-  }
-  
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+.card{
+  height: 600px;
+  margin: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
 
-  #cardsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
 
-  /* HEART STYLE */ 
-  .heart-button {
-    cursor: pointer;
-    border: none;
-    padding: 0;
-    color: white;
-    background-color: #d7d7d7;
-  }
-  
-  .heart-button:active {
-    background-color: #d7d7d7;
-    color: red;
-  }
-
-  .heart-button:focus{
-    outline: 0;
-  }
-
-  .heart-button.clicked {
-    background-color: #d7d7d7;
-    color: red;
-  }
+#cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 400px;
+}
 /* CARD STYLES */
 
+/* HEART STYLES */
+.heart-button {
+  cursor: pointer;
+  padding: 0;
+  color: white;
+  background-color: #424242;
+  border: none;
+  outline: none;
+}
+
+.heart-button:active {
+  background-color: #424242;
+  color: red;
+  border: none;
+  outline: none;
+}
+
+.heart-button:focus {
+  outline: 0;
+  border: none;
+  background-color: #424242;
+  outline: none;
+}
+
+button.liked {
+  background-color: #424242;
+  color: red;
+  border: none;
+  outline: none;
+}
+/* HEART STYLES */
+
+/*MAT-CARD STYLES*/
+mat-card-header {
+  display: block;
+}
+
+mat-card-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: white;
+}
+
+p {
+  margin-top: 10px;
+  color: #6c757d;
+}
+/*MAT-CARD STYLES*/
+
 /* LIST STYLES */
-  ul {
-    list-style-type: none;
-  }
-  /* LIST STYLES */
+ul {
+  list-style-type: none;
+}
+/* LIST STYLES */
 
-
+/*TITLE STYLE*/
+#title-class {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+/*TITLE STYLE*/

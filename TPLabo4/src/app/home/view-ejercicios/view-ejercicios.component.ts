@@ -2,6 +2,8 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 
 import { ApiService } from 'src/app/Core/api.service';
 import { Excercise, Routine } from 'src/app/Core/models';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-view-ejercicios',
@@ -26,7 +28,7 @@ export class ViewEjerciciosComponent implements OnInit, AfterViewInit{
 
   ngAfterViewInit(): void {
     this.onLikeClick();
-  }
+ }
 
   getRoutines(){
     this.apiService.getRoutines().subscribe(resp => {
@@ -67,12 +69,11 @@ export class ViewEjerciciosComponent implements OnInit, AfterViewInit{
     });
   }
 
-
   onLikeClick() {
     // TODO: Implement like button functionality here
     console.log(this.heartButton);
     if(this.heartButton)
       this.heartButton.nativeElement.classList.add('clicked');
   }
-
+  
 }
