@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Output, OnInit} from '@angular/core';
 import { User } from '../Core/models';
-/*import { ApiService } from '../Core/api.service';*/
+import { ApiService } from '../Core/api.service';
 import { ValidationsService } from '../Core/validations.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { validator } from '../Core/validators';
 
 
 @Component({
@@ -12,13 +13,19 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class AddUserComponent{
 
-  constructor(private validationService: ValidationsService, private fb: FormBuilder){};
+  constructor(private validationService: ValidationsService, private fb: FormBuilder, private apiService: ApiService){
+
+    this.apiService.duplicateEmail("m@gmail.com").subscribe(answer => {console.log(answer)});
+    this.validationService.checkDuplicate("milagros@gmail.com").then(answer => {console.log(answer)});
+  };
 
   public newUser: User = new User();
 
   @Output() public userToCreate: EventEmitter<User> = new EventEmitter();
   
   private emailPattern: RegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  private checkDuplicate2: Promise<boolean> = this.validationService.checkDuplicate(this.newUser.email);
+
 
   loginForm: FormGroup = this.fb.group({
     nombre: new FormControl(" ", [Validators.required, Validators.maxLength(10)]),
@@ -26,7 +33,7 @@ export class AddUserComponent{
     edad: new FormControl(" ", [Validators.required, Validators.maxLength(3)]),
     peso: new FormControl(" ", [Validators.required, Validators.maxLength(3)]),
     altura: new FormControl(" ", [Validators.required, Validators.maxLength(3)]),
-    email: new FormControl(" ",[Validators.required, Validators.pattern(this.emailPattern)]),
+    email: new FormControl(" ",[Validators.required, Validators.pattern(this.emailPattern), validator(this.validationService)]),
     password: new FormControl(" ", [Validators.required, Validators.minLength(5)])
 
   })
@@ -71,5 +78,22 @@ export class AddUserComponent{
   
     this.userToCreate.emit(this.newUser);    
   }
+
+    
+ public async checkDuplicate(user: User){
+
+  let error: boolean = true;
+  const check = this.validationService.checkDuplicate(user.email);
+  
+  if(await check){
+    
+  }
+  else{
+    error = false;
+  }
+
+  return error;
+
+} 
 
 }
