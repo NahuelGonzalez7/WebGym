@@ -84,8 +84,10 @@ header label {
 
 h1 {
   float: left;
-  color: #fff;
-  font-family: Georgia;
+  color: white;
+  font-family: 'Heebo', sans-serif;
+  padding: 4.5px;
+  font-weight: 800;
 }
 
 header .contenedor {
