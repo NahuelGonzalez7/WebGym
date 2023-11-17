@@ -32,21 +32,7 @@
   outline: none;
 }
 
-.heart-button:active {
-  background-color: #424242;
-  color: red;
-  border: none;
-  outline: none;
-}
-
-.heart-button:focus {
-  outline: 0;
-  border: none;
-  background-color: #424242;
-  outline: none;
-}
-
-button.liked {
+.heart-button-liked {
   background-color: #424242;
   color: red;
   border: none;
@@ -63,12 +49,14 @@ mat-card-title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  color: white;
+  color: #d5d8d5;
 }
 
 p {
   margin-top: 10px;
-  color: #6c757d;
+  color: #d5d8d5;
+  display: flex;
+  justify-content: center;
 }
 /*MAT-CARD STYLES*/
 
@@ -81,6 +69,7 @@ ul {
 /*TITLE STYLE*/
 #title-class {
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 25px;
+  font-weight: bold;
 }
 /*TITLE STYLE*/
