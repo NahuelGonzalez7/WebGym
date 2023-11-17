@@ -17,6 +17,7 @@ ngOnInit(): void {
 }
 
 public navigateToLanding(){
+  localStorage.removeItem('user');
   this.router.navigate(['//landing']);
 }
 

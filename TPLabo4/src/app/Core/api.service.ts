@@ -21,9 +21,18 @@ export class ApiService {
     return this.http.get<User[]>(`${this.baseURL}/users?email=${email}&password=${password}`);
   }  
 
+  getUserLogged(email: string, password: string): Observable<User> {
+    //ToDo Ver como me devuelve este metodo el user y tratar de convertirlo a obj
+    return this.http.get<User>(`${this.baseURL}/users?email=${email}&password=${password}`);
+  }  
+
 addUser(createUser: User): Observable<boolean> {
     const url = `${this.baseURL}/users`;
     return this.http.post<boolean>(url, createUser);
+  }
+
+  getUserById(userID:number): Observable<User>{
+    return this.http.get<User>(`${this.baseURL}/users/${userID}`);
   }
 
 
