@@ -6,7 +6,7 @@
       <mat-card class="card">
         <mat-card-header>
           <mat-card-title>{{excercise.excercise}} 
-          <button class="heart-button" (click)="onLikeClick()"> <i class="fas fa-heart"></i> </button>
+          <button class="heart-button" [ngClass]="{'clicked': isFavourite(excercise.id)}" (click)="addExcerciseToFavourite(user.id,excercise.id)"> <i class="fas fa-heart"></i> </button>
           </mat-card-title>
         </mat-card-header>
         <img mat-card-image src="{{excercise.imageURL}}" alt="Photo of a Shiba Inu">

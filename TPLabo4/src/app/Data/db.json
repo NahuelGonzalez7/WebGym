@@ -8,8 +8,133 @@
       "peso": 63,
       "altura": 173,
       "email": "m@gmail.com",
-      "password": "12345"
-    }
+      "password": "12345",
+      "favouriteExercise": [
+        {
+          "id": 1,
+          "exerciseID": 1
+        },
+        {
+          "id": 2,
+          "exerciseID": 3
+        },
+        {
+          "id": 3,
+          "exerciseID": 2
+        },
+        {
+          "id": 4,
+          "exerciseID": 2          
+        },
+        {
+          "exerciseID": 4
+        },
+        {
+          "exerciseID": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "email": "mili@gmail.com",
+      "password": "123",
+      "favouriteExercise": [
+        {
+          "id": 1,
+          "exerciseID": 1
+        },
+        {
+          "id": 2,
+          "exerciseID": 3
+        },
+        {
+          "id": 3,
+          "exerciseID": 2
+        },
+        {
+          "id": 4,
+          "exerciseID": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "email": "nahuel@gmail.com",
+      "password": "123",
+      "favourite_excercise": [
+        {
+          "id": 1,
+          "exerciseID": 1,
+          "isFavourite": true
+        },
+        {
+          "id": 2,
+          "exerciseID": 3,
+          "isFavourite": true
+        },
+        {
+          "id": 3,
+          "exerciseID": 2,
+          "isFavourite": true
+        },
+        {
+          "id": 4,
+          "exerciseID": 2,
+          "isFavourite": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "email": "agostina@gmail.com",
+      "password": "123",
+      "favouriteExercise": []
+    },
+    {
+      "id": 5,
+      "email": "agos@gmail.com",
+      "password": "123",
+      "favouriteExercise": []
+    },
+    {
+      "id": 6,
+      "nombre": "Milagros",
+      "apellido": "Pecar",
+      "edad": "31",
+      "peso": "63",
+      "altura": "1.73",
+      "email": "m@gmail.com",
+      "password": "123",
+      "favouriteExercise": []
+    },
+    {
+      "id": 7,
+      "nombre": "m",
+      "apellido": "p",
+      "edad": "10",
+      "peso": "1",
+      "altura": "12",
+      "email": "mm@gmail.com",
+      "password": "123",
+      "favouriteExercise": [
+        {
+          "id": 2,
+          "exerciseID": 3,
+          "isFavourite": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "",
+      "apellido": "",
+      "edad": null,
+      "peso": null,
+      "altura": null,
+      "email": "",
+      "password": "",
+      "favouriteExercise": []
+    }   
   ],
     "routines": {
         "lunes": [
