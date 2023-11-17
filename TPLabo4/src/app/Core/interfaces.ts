@@ -10,10 +10,7 @@ export interface Ipersona {
 
 
 export interface IfavouriteExercise{
-    id: number | null;
-    // userID: number;
     exerciseID: number;
-    // isFavourite: boolean;
 }
 
 

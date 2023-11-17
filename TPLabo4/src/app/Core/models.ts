@@ -6,7 +6,7 @@ import { Iexercise, IfavouriteExercise, Ipersona } from "./interfaces";
 
 
 export class User implements Ipersona {
-  id: number | null;
+  id: number;
   nombre: string;
   apellido: string;
   edad: number | null;
@@ -32,16 +32,10 @@ export class User implements Ipersona {
 
 
 export class FavouriteExercise implements IfavouriteExercise{
-  id: number | null;
-  // userID: number;
   exerciseID: number;
-  // isFavourite: boolean;
 
   constructor(favExercise?:any){
-    this.id = favExercise == undefined ? null : favExercise.id;
-    // this.userID = favExcercise == undefined ? null : favExcercise.userID;
     this.exerciseID = favExercise == undefined ? null : favExercise.exerciseID;
-    // this.isFavourite = favExercise == undefined ? false : favExercise.isFavourite;
   }
 }
 
@@ -53,6 +47,7 @@ export class Excercise implements Iexercise {
   repetitions: number;
   series: number;
   exerciseType: string;
+  isFavourite?: boolean;
 
   constructor(excercise?:any){
     this.id = excercise == undefined ? null : excercise.id;
