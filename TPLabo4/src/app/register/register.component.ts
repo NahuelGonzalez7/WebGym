@@ -11,15 +11,16 @@ import Swal from 'sweetalert2';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+
   constructor(private apiService: ApiService, private router: Router) {}
 
   public users: Array<User> = [];
+  /*public user: User = new User();*/
+
 
   ngOnInit(): void {
     this.getUsers();
   }
-
-
 
   /**
    * @method getUsers: Fetches and updates the list of users from the server.

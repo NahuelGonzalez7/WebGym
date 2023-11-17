@@ -4,9 +4,9 @@
       "id": 1,
       "nombre": "milagros",
       "apellido": "pecar",
-      "edad": 31,
-      "peso": 63,
-      "altura": 173,
+      "edad": 2,
+      "peso": 2,
+      "altura": 2,
       "email": "m@gmail.com",
       "password": "12345",
       "favouriteExercise": [
