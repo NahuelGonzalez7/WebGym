@@ -6,6 +6,8 @@ import { AuthService } from 'src/app/Core/auth.service';
 import { User } from 'src/app/Core/models';
 import { UserService } from 'src/app/Core/user.service';
 import { ValidationsService } from 'src/app/Core/validations.service';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -15,15 +17,15 @@ import { ValidationsService } from 'src/app/Core/validations.service';
 export class LoginComponent {
 
   public user: User = new User();
-  /*private email: string = " ";*/
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router, private validationService: ValidationsService, private apiService: ApiService) {};
   
-  private emailPattern: RegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
+  private emailPattern: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  
+  
   loginForm: FormGroup = this.fb.group({
     email: new FormControl(" ",[Validators.required, Validators.pattern(this.emailPattern)]),
-    password: new FormControl(" ", [Validators.required, Validators.minLength(7)])
+    password: new FormControl(" ", [Validators.required, Validators.minLength(5)])
 
   })
 
@@ -40,7 +42,7 @@ public getFieldError(field: string): string | null{
 
  public async checkAuth(){
     const check = this.authService.checkAuth(this.user.email, this.user.password);
-
+    
     if(await check){
       this.apiService.getUserLogged(this.user.email,this.user.password).subscribe(userToSend => {
         localStorage.setItem('user', JSON.stringify(userToSend));
@@ -48,10 +50,16 @@ public getFieldError(field: string): string | null{
       });
     }
     else{
-      alert("No existe el usuario");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "No se encontro el usuario"
+      });
+      /*
+      alert("No existe el usuario");*/
     }
-  }
-/*se agrego */
+  } 
+
   public navigateToRegister(){
     this.router.navigate(['/register']);
   }

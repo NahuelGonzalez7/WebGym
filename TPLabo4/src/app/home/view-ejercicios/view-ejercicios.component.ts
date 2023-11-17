@@ -9,8 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 
 import { ApiService } from 'src/app/Core/api.service';
 import { ExerciseService } from 'src/app/Core/exercise.service';
-import { Excercise, FavouriteExercise, User } from 'src/app/Core/models';
+import { Excercise, FavouriteExercise, User,Routine } from 'src/app/Core/models';
 import { UserService } from 'src/app/Core/user.service';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-view-ejercicios',
@@ -104,6 +106,7 @@ export class ViewEjerciciosComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     // this.onLikeClick();
   }
+ 
 
   // getLoggedUser(): User {
   //   this.userService.currentUser.subscribe((currentUser) => {

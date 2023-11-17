@@ -48,6 +48,8 @@ export class Excercise implements Iexercise {
   series: number;
   exerciseType: string;
   isFavourite?: boolean;
+  imageURL: string;
+
 
   constructor(excercise?:any){
     this.id = excercise == undefined ? null : excercise.id;
@@ -55,7 +57,9 @@ export class Excercise implements Iexercise {
     this.description = excercise == undefined ? '' : excercise.description;
     this.repetitions = excercise == undefined ? null : excercise.repetitions;
     this.series = excercise == undefined ? null : excercise.series;
-    this.exerciseType = excercise == undefined ? null : excercise.excerciseType;
+    this.excerciseType = excercise == undefined ? null : excercise.excerciseType;
+    this.imageURL = excercise == undefined ? null : excercise.imageURL;
+
   }
 }
 
