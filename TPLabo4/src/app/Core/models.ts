@@ -40,7 +40,7 @@ export class FavouriteExercise implements IfavouriteExercise{
 }
 
 
-export class Excercise implements Iexercise {
+export class Exercise implements Iexercise {
   id: number;
   excercise: string;
   description: string;
@@ -57,7 +57,7 @@ export class Excercise implements Iexercise {
     this.description = excercise == undefined ? '' : excercise.description;
     this.repetitions = excercise == undefined ? null : excercise.repetitions;
     this.series = excercise == undefined ? null : excercise.series;
-    this.excerciseType = excercise == undefined ? null : excercise.excerciseType;
+    this.exerciseType = excercise == undefined ? null : excercise.exerciseType;
     this.imageURL = excercise == undefined ? null : excercise.imageURL;
 
   }

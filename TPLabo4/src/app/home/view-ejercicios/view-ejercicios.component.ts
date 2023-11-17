@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { ApiService } from 'src/app/Core/api.service';
 import { ExerciseService } from 'src/app/Core/exercise.service';
-import { Excercise, FavouriteExercise, User,Routine } from 'src/app/Core/models';
+import { Exercise, FavouriteExercise, User } from 'src/app/Core/models';
 import { UserService } from 'src/app/Core/user.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -25,7 +25,7 @@ export class ViewEjerciciosComponent implements OnInit, AfterViewInit {
 
   public favouriteExercises: FavouriteExercise[] = [];
   public favouriteExercisesIDS: number[] = [];
-  public excercises: Excercise[] = [];
+  public excercises: Exercise[] = [];
   public user: User = new User();
 
   constructor(

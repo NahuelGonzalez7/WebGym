@@ -4,9 +4,7 @@ import { Router } from '@angular/router';
 import { ApiService } from 'src/app/Core/api.service';
 import { AuthService } from 'src/app/Core/auth.service';
 import { User } from 'src/app/Core/models';
-import { UserService } from 'src/app/Core/user.service';
 import { ValidationsService } from 'src/app/Core/validations.service';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 
 @Component({

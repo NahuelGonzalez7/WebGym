@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of, switchMap } from 'rxjs';
-import { Excercise, FavouriteExercise, User } from './models';
+import { Exercise, FavouriteExercise, User } from './models';
 
 @Injectable({
   providedIn: 'root',
