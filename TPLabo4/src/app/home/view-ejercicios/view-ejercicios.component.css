@@ -39,18 +39,24 @@
   outline: none;
 }
 
-.heart-button:focus {
-  outline: 0;
-  border: none;
+.heart-button:focus{
   background-color: #424242;
-  outline: none;
+  border: none;
+  outline: 0;
 }
 
-button.liked {
+.heart-button.clicked {
   background-color: #424242;
   color: red;
   border: none;
-  outline: none;
+  outline: 0;
+}
+
+.heart-button.notclicked {
+  background-color: #424242;
+  color: white;
+  border: none;
+  outline: 0;
 }
 /* HEART STYLES */
 
