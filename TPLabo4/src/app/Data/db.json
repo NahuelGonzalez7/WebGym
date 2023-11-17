@@ -1,5 +1,5 @@
 {
- "users": [
+  "users": [
     {
       "id": 1,
       "nombre": "milagros",
@@ -350,5 +350,4 @@
             "excerciseType": "musculación",
             "imageURL": "assets/Ejercicios/pesomuertounapierna.jpg"           
         }
-    ]
 }
