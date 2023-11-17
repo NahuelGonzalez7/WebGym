@@ -10,6 +10,7 @@ export class ValidationsService {
   constructor() { }
   
   public isValidForm(field: string, FormGroup: FormGroup): boolean | null{
+    //ToDo buscar si hay mejores combnaciones de .touched
     return FormGroup.controls[field].errors && FormGroup.controls[field].touched;}
 
   public getFormError(field: string, FormGroup: FormGroup): string | null{  

@@ -10,6 +10,7 @@ export class AuthService {
 
   constructor(private apiService: ApiService) { }
 
+  //Puede retornar boolean solo
   public async checkAuth(email:string, password: string): Promise<boolean>{
 
     let users: User[] = [];
@@ -18,7 +19,10 @@ export class AuthService {
 
       let apiResponse =  this.apiService.getUserToAuth(email,password);
 
+
+      //ToDo revisar
       users = await lastValueFrom(apiResponse);
+      console.log(users);
 
     }catch(error){
       console.log(error);
