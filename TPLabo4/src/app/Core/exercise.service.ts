@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of, switchMap } from 'rxjs';
-import { Excercise, FavouriteExercise, User } from './models';
+import { Exercise, FavouriteExercise, User } from './models';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -18,8 +18,8 @@ export class ExerciseService {
  *
  * @returns An observable that emits an array of exercises.
  */
-  getExercises(): Observable<Excercise[]> {
-    return this.http.get<Excercise[]>(`${environment.apiURL}/excercises`).pipe(
+  getExercises(): Observable<Exercise[]> {
+    return this.http.get<Exercise[]>(`${environment.apiURL}/excercises`).pipe(
       map((data: any) => {
         console.log(data);
         return data;
@@ -32,10 +32,10 @@ export class ExerciseService {
  * @param typeOfExercise - The type of exercise to filter by.
  * @returns An observable that emits an array of exercises matching the specified type.
  */
-  getExercisesByType(typeOfExcercise: string): Observable<Excercise[]> {
+  getExercisesByType(typeOfExcercise: string): Observable<Exercise[]> {
     //Si tuvieramos que usar el bucle de for declaramos este array
     //const excerciseTypeArray: Excercise[] = [];
-    return this.http.get<Excercise[]>(`${environment.apiURL}/excercises`).pipe(
+    return this.http.get<Exercise[]>(`${environment.apiURL}/excercises`).pipe(
       map((data: any) => {
         // for(let excercise of data) {
         //   if(excercise.excerciseType == typeOfExcercise)
@@ -44,7 +44,7 @@ export class ExerciseService {
         // return excerciseTypeArray;
 
         //Esta es una manera de hacerla con filter, que es la ideal porque te ahorras lineas de codigo y hace lo mismo que arriba
-        return data.filter( (excercise: Excercise) => excercise.exerciseType == typeOfExcercise );
+        return data.filter( (excercise: Exercise) => excercise.exerciseType == typeOfExcercise );
       })
     );
   }

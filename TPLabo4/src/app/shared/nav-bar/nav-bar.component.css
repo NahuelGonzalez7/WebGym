@@ -1,6 +1,6 @@
 #menu-bar {
   float: right;
-  display: none; /*se agrego el display none*/
+  display: none;
 }
 
 .menu-user{
@@ -17,8 +17,7 @@
 .menu-user a:hover {
     text-decoration: none;
     color: darkgrey;
-  }
-  
+  }  
 
 header label {
   float: right;
@@ -26,12 +25,12 @@ header label {
   margin: 10px 0px;
   cursor: pointer;
 }
-
+/*
 .icon-basket {
   float: right;
   margin: 15px 20px;
   color: white;
-}
+}*/
 
 .fa-user {
   padding: 0px 15px;
@@ -41,11 +40,12 @@ header label {
   text-decoration: none;
   color: darkgrey;
 }
+/*
 
 .shopping-cart:hover {
   text-decoration: none;
   color: darkgrey;
-}
+}*/
 
 .menu {
   position: absolute;

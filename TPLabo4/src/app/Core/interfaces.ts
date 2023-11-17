@@ -23,6 +23,7 @@ export interface Iexercise {
     //ToDo agregar tipo de ejercicio
     //tipo de ejercicio tambien estaria muy bueno que sea un enum para manejar el filtro 
     exerciseType: string;
+    imageURL: string;
 }
 
 //ToDo agregar enums
