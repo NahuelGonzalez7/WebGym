@@ -19,7 +19,7 @@ export class ExerciseService {
  * @returns An observable that emits an array of exercises.
  */
   getExercises(): Observable<Exercise[]> {
-    return this.http.get<Exercise[]>(`${environment.apiURL}/excercises`).pipe(
+    return this.http.get<Exercise[]>(`${environment.apiURL}/exercises`).pipe(
       map((data: any) => {
         console.log(data);
         return data;
@@ -35,7 +35,7 @@ export class ExerciseService {
   getExercisesByType(typeOfExcercise: string): Observable<Exercise[]> {
     //Si tuvieramos que usar el bucle de for declaramos este array
     //const excerciseTypeArray: Excercise[] = [];
-    return this.http.get<Exercise[]>(`${environment.apiURL}/excercises`).pipe(
+    return this.http.get<Exercise[]>(`${environment.apiURL}/exercises`).pipe(
       map((data: any) => {
         // for(let excercise of data) {
         //   if(excercise.excerciseType == typeOfExcercise)

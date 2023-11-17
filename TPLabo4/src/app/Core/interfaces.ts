@@ -16,7 +16,7 @@ export interface IfavouriteExercise{
 
 export interface Iexercise {
     id: number | null;
-    excercise: string;
+    exercise: string;
     description: string;
     repetitions: number;
     series: number;
