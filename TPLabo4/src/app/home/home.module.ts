@@ -1,14 +1,15 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { SharedModule } from '../shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
-import { SharedModule } from '../shared/shared.module';
 import { ViewEjerciciosComponent } from './view-ejercicios/view-ejercicios.component';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
-import { ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from '../components/login/login.component';
+
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { LoginComponent } from '../components/login/login.component';
     SharedModule,
     MatCardModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSlideToggleModule
   ],
   exports: [
     ReactiveFormsModule,

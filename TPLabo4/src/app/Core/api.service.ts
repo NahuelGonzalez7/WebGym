@@ -1,9 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
-
-import { Excercise, Routine, User } from './models';
-/*import { FormGroup } from '@angular/forms';*/
+import { Observable, catchError, map, of, switchMap } from 'rxjs';
+import { Exercise, FavouriteExercise, User } from './models';
 
 @Injectable({
   providedIn: 'root',
@@ -39,6 +37,11 @@ export class ApiService {
     return this.http.get<User[]>(`${this.baseURL}/users?email=${email}&password=${password}`);
   }  
 
+  getUserLogged(email: string, password: string): Observable<User> {
+    //ToDo Ver como me devuelve este metodo el user y tratar de convertirlo a obj
+    return this.http.get<User>(`${this.baseURL}/users?email=${email}&password=${password}`);
+  }  
+
   /**
    * @method addUser: Adds a new user to the system. This method sends an HTTP POST request to the server to create a new user.
    * @param {User} createUser - The user object containing information for creating the new user.
@@ -50,7 +53,17 @@ export class ApiService {
     const url = `${this.baseURL}/users`;
     return this.http.post<boolean>(url, createUser);
   }
-  
+
+  getUserById(userID:number): Observable<User>{
+    return this.http.get<User>(`${this.baseURL}/users/${userID}`);
+  }
+
+
+/*
+  editPerson(id: number, updatePerson: Person): Observable<boolean> {
+    const url = `${this.baseURL}/persons/${id}`;
+    return this.http.put<boolean>(url, updatePerson);
+  }
 
   /**
    * @method duplicateEmail: Checks if an email address already exists in the system. 
@@ -60,6 +73,7 @@ export class ApiService {
    * @throws {Error} If the HTTP request fails or encounters an error.
    */
 
+  
   duplicateEmail(email: string): Observable<User[]> {
     return this.http.get<User[]>(`${this.baseURL}/users?email=${email}`);
   }  
@@ -73,8 +87,8 @@ export class ApiService {
    *
    * @returns An observable that emits an array of Routine objects.
    */
-  getRoutines(): Observable<Routine[]> {
-    return this.http.get<Routine[]>(`${this.baseURL}/routines`).pipe(
+  getRoutines(): Observable<FavouriteExercise[]> {
+    return this.http.get<FavouriteExercise[]>(`${this.baseURL}/routines`).pipe(
       map((data: any) => {
         console.log(data[0]);
         return data[0];
@@ -87,8 +101,8 @@ export class ApiService {
    * @param day - The day of the week for which routines are requested.
    * @returns An observable that emits an array of Routine objects for the specified day.
    */
-  getRoutinesByDay(day: string): Observable<Routine[]> {
-    return this.http.get<Routine[]>(`${this.baseURL}/routines`).pipe(
+  getRoutinesByDay(day: string): Observable<FavouriteExercise[]> {
+    return this.http.get<FavouriteExercise[]>(`${this.baseURL}/routines`).pipe(
       map((data: any) => {
         if (data[day]) {
           return data[day];
@@ -101,43 +115,4 @@ export class ApiService {
 
   //#endregion
 
-  //#region excercises
-
-  getExcercises(): Observable<Excercise[]> {
-    return this.http.get<Excercise[]>(`${this.baseURL}/excercises`).pipe(
-      map((data: any) => {
-        console.log(data);
-        return data;
-      })
-    );
-  }
-
-  getExcercisesByType(typeOfExcercise: string): Observable<Excercise[]> {
-    //Si tuvieramos que usar el bucle de for declaramos este array
-    //const excerciseTypeArray: Excercise[] = [];
-    return this.http.get<Excercise[]>(`${this.baseURL}/excercises`).pipe(
-      map((data: any) => {
-        // for(let excercise of data) {
-        //   if(excercise.excerciseType == typeOfExcercise)
-        //     excerciseTypeArray.push(excercise);
-        // }
-        // return excerciseTypeArray;
-        
-        //Esta es una manera de hacerla con filter, que es la ideal porque te ahorras lineas de codigo y hace lo mismo que arriba
-        return data.filter(
-          (excercise: Excercise) => excercise.excerciseType == typeOfExcercise
-        );
-      })
-    );
-  }
-
-  getFavouriteExcercises() {}
-
-  //Crear rutina -> seleccionando, ejercicios y asignandole un dia a la rutina
-  // Podria tener un creador y eliminar de rutinas
-  // Y tambien un filtrador de rutinas por dia
-  // Un dia solo no tiene ejercicios
-  getFavouriteExcercisesByDay() {}
-
-  //#endregion
 }

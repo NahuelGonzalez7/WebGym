@@ -24,40 +24,65 @@ ngOnInit(): void {
    */
 
 public navigateToLanding(){
+  localStorage.removeItem('user');
   this.router.navigate(['//landing']);
 }
 
+/**
+ *@method aboutUS: Displays information about the Fitness Gym in a modal using the SweetAlert2 library.
+ * This function creates a modal using SweetAlert2 to provide information about Fitness Gym. It includes
+ * details about the gym's history, staff composition, and the balance between physical activity,
+ * comfort, and social relationships.
+ */
 
-public nosotros(){
+public aboutUs(){
 
   Swal.fire({
     title: "Nosotros",
-    text: "Fitness Gym es un tradicional gimnasio con más de 20 años en la actividad. Nuestro Staff está compuesto por profesores de educación física, licenciados en alto rendimiento, especialistas en management de entidades deportivas y marketing deportivo. Los años de experiencia nos han llevado a desarrollar un lugar donde se equilibra la actividad física, la comodidad y las relaciones sociales.",
+    html: '<p Contamos class= "aboutUs-swal">Fitness Gym es un tradicional gimnasio con más de 20 años en la actividad. Nuestro Staff está compuesto por profesores de educación física, licenciados en alto rendimiento, especialistas en management de entidades deportivas y marketing deportivo. Los años de experiencia nos han llevado a desarrollar un lugar donde se equilibra la actividad física, la comodidad y las relaciones sociales.</p>',
     imageUrl: "assets/nosotros.jpg",
     imageWidth: 400,
-    imageHeight: 200
+    imageHeight: 200,
+    width: 3500
   });
 }
 
-public servicios(){
+/**
+ * @method services: Displays information about the services offered by Fitness Gym in a modal using the SweetAlert2 library.
+ * This function creates a modal using SweetAlert2 to provide information about the various services offered by Fitness Gym.
+ * It includes details about the state-of-the-art gym equipment, equipped rooms for various disciplines, and a training
+ * and rehabilitation pool.
+ */
+
+public services(){
 
   Swal.fire({
     title: "Nuestros servicios",
-    text: "Contamos con una amplia variedad de servicios según los gustos y necesidades de cada persona. Entre ellos podemos mencionar una sala de maquinas de ultima generacion, salones equipados para realizar disciplinas varias y tambien contamos con una pileta de entrenameinto y rehabilitación.",
+    html: '<p Contamos class= "services-swal">Contamos con una amplia variedad de servicios según los gustos y necesidades de cada persona. Entre ellos podemos mencionar una sala de maquinas de ultima generacion, salones equipados para realizar disciplinas varias y tambien contamos con una pileta de entrenameinto y rehabilitación.</p>',
     imageUrl: "assets/servicios.jpg",
     imageWidth: 400,
-    imageHeight: 200
+    imageHeight: 200,
+    width: 3500
+
   });
 }
 
-public contacto(){
+/**
+ * @method contact: Displays contact information for Fitness Gym in a modal using the SweetAlert2 library.
+ * This function creates a modal using SweetAlert2 to provide contact information for Fitness Gym,
+ * including the telephone number and email address.
+ */
+
+public contact(){
 
   Swal.fire({
     title: "Contacto",
-    text: "Teléfono: (0223)416-7777. E-mail: contacto@fitnessgym.com.",
+    html: '<p class= "contact-swal">Teléfono: (0223)416-7777</p>' + ' <p>E-mail: contacto@fitnessgym.com</p>',
     imageUrl: "assets/contacto.png",
     imageWidth: 400,
-    imageHeight: 200
+    imageHeight: 200,
+    width: 3500,
+
   });
 }
 

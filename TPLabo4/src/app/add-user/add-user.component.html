@@ -55,11 +55,12 @@
       <div class="form-field">
         <label for="email">Email *</label>
         <br>
-        <input type="text" formControlName="email" placeholder = "Ingrese su Email" [(ngModel)]="newUser.email" required>
+        <input type="text" formControlName="email" placeholder = "Ingrese su Email" [(ngModel)]="newUser.email" required (ngModelChange)="checkDuplicateEmail()">
         </div>
         <span *ngIf="isValidField('email')" class="error-message">
           {{getFieldError("email")}}
           </span>
+
       <br>
 
       <div class="form-field">

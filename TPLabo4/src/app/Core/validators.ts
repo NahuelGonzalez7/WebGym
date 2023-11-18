@@ -12,17 +12,21 @@ export function validator(validationService: ValidationsService): ValidatorFn {
         if (!value) {
             return null;
         }
+/*
+        validationService.checkDuplicate(value).then(answer=>{
+        	return  isValid = answer;                       
+             
+        
+        });
 
-        validationService.checkDuplicate(value).then(answer=>{isValid = answer});
-       console.log(isValid == null);
-        if(isValid == null){
+     console.log(isValid);
+       /* if(isValid == false){
             console.log("hola");
              return null;   
         }else{
             console.log("hola");
             return {emailInvalid: true};
-        }
-
-        return isValid?null:{emailInvalid:true};
+        }*/
+      return isValid?null:{emailInvalid:true};
     };
 }

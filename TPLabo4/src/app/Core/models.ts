@@ -1,16 +1,20 @@
-import { Edays, Iexcercise, Iroutine as Iroutine, Ipersona } from "./interfaces";
+
+import { Iexercise, IfavouriteExercise, Ipersona } from "./interfaces";
+
+
+
 
 
 export class User implements Ipersona {
-  id: number | null;
+  id: number;
   nombre: string;
   apellido: string;
   edad: number | null;
   email: string;
-  password: string;
-  
+  password: string;  
   peso: number | null;
   altura: number | null;
+  favouriteExercise: IfavouriteExercise[] = [];
 
   constructor(user?:any){
 
@@ -22,30 +26,30 @@ export class User implements Ipersona {
     this.altura = user == undefined ? null : user.altura;
     this.email =  user == undefined ? '' : user.email;
     this.password =  user == undefined ? '' : user.password;
+    this.favouriteExercise = user == undefined ? [] : user.favouriteExcercise;
   }
 }
 
 
-export class Routine implements Iroutine{
-  id: number | null;
-  days: Edays;
- 
+export class FavouriteExercise implements IfavouriteExercise{
+  exerciseID: number;
 
-  constructor(routine?:any){
-    this.id = routine == undefined ? null : routine.id;
-    this.days = routine == undefined ? [] : routine.days;
+  constructor(favExercise?:any){
+    this.exerciseID = favExercise == undefined ? null : favExercise.exerciseID;
   }
 }
 
 
-export class Excercise implements Iexcercise {
-  id: number | null;
+export class Exercise implements Iexercise {
+  id: number;
   excercise: string;
   description: string;
   repetitions: number;
   series: number;
-  excerciseType: string;
+  exerciseType: string;
+  isFavourite?: boolean;
   imageURL: string;
+
 
   constructor(excercise?:any){
     this.id = excercise == undefined ? null : excercise.id;
@@ -53,9 +57,9 @@ export class Excercise implements Iexcercise {
     this.description = excercise == undefined ? '' : excercise.description;
     this.repetitions = excercise == undefined ? null : excercise.repetitions;
     this.series = excercise == undefined ? null : excercise.series;
-    this.excerciseType = excercise == undefined ? null : excercise.excerciseType;
+    this.exerciseType = excercise == undefined ? null : excercise.exerciseType;
     this.imageURL = excercise == undefined ? null : excercise.imageURL;
-    
+
   }
 }
 

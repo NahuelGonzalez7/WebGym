@@ -5,27 +5,28 @@ export interface Ipersona {
     edad: number | null;
     email: string;
     password: string;
+    favouriteExercise: IfavouriteExercise[];
 }
 
 
-export interface Iroutine{
-    id: number | null;
-    days: Edays;
+export interface IfavouriteExercise{
+    exerciseID: number;
 }
 
 
-export interface Iexcercise {
+export interface Iexercise {
     id: number | null;
     excercise: string;
     description: string;
     repetitions: number;
     series: number;
+    //ToDo agregar tipo de ejercicio
     //tipo de ejercicio tambien estaria muy bueno que sea un enum para manejar el filtro 
-    excerciseType: string;
+    exerciseType: string;
     imageURL: string;
 }
 
-
+//ToDo agregar enums
 //Estaria muy bueno que los dias los pueda manejar con enums para filtrar la info
 export enum Edays{
     lunes,
