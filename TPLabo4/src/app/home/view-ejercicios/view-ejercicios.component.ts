@@ -1,12 +1,8 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/Core/api.service';
 import { ExerciseService } from 'src/app/Core/exercise.service';
 import { Exercise, FavouriteExercise, User } from 'src/app/Core/models';
 import Swal from 'sweetalert2';
-import { UserService } from 'src/app/Core/user.service';
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
-import { NgClass } from '@angular/common';
 
 
 @Component({
