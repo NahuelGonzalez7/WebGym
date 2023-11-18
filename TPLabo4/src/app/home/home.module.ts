@@ -9,13 +9,15 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ViewEjerciciosComponent } from './view-ejercicios/view-ejercicios.component';
+import { FavouriteExercisesComponent } from './favourite-exercises/favourite-exercises.component';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ViewEjerciciosComponent
+    ViewEjerciciosComponent,
+    FavouriteExercisesComponent
   ],
   imports: [
     CommonModule,

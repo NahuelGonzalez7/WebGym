@@ -14,7 +14,6 @@ export class ValidationsService {
   constructor(private apiService: ApiService) { }
   
   public isValidForm(field: string, FormGroup: FormGroup): boolean | null{
-    //ToDo buscar si hay mejores combnaciones de .touched
     return FormGroup.controls[field].errors && FormGroup.controls[field].touched;}
 
   public getFormError(field: string, FormGroup: FormGroup): string | null{  
@@ -40,7 +39,6 @@ export class ValidationsService {
             return "Formato de correo electrónico invalido";  
 
           case 'emailInvalid':
-            /*console.log("hola");*/
             return "El email ya se encuentra ingresado";  
 
       }
@@ -55,16 +53,12 @@ export class ValidationsService {
     try{
 
       let apiResponse =  this.apiService.duplicateEmail(email);
-      console.log(apiResponse);
 
       users = await lastValueFrom(apiResponse);
-      console.log(users);
 
     }catch(error){
       console.log(error);
     }
-
-    console.log(users.length == 1);
 
     return users.length == 1;
     
