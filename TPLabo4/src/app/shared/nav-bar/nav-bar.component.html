@@ -15,7 +15,6 @@
   <!-- Nav Bar User loggeado-->
   <div *ngIf="isUser" class="contenedor">
     <a href=""> <h1>FITNESS GIM</h1> </a>
-    <a href=""> <h1>FITNESS GYM</h1> </a>
     <div class="menu-user">
       <a *ngIf="isFavourite" (click)="navigateToFavourite()">Tus Favoritos</a>
       <a *ngIf="goBack" (click)="navigateToHome()">Volver</a>
