@@ -13,11 +13,7 @@ import { validator } from '../Core/validators';
 })
 export class AddUserComponent{
 
-  constructor(private validationService: ValidationsService, private fb: FormBuilder, private apiService: ApiService){
-
-    this.apiService.duplicateEmail("m@gmail.com").subscribe(answer => {console.log(answer)});
-    this.validationService.checkDuplicate("milagros@gmail.com").then(answer => {console.log(answer)});
-  };
+  constructor(private validationService: ValidationsService, private fb: FormBuilder, private apiService: ApiService) { };
 
   public newUser: User = new User();
 

@@ -30,9 +30,7 @@ export class AuthService {
       let apiResponse =  this.apiService.getUserToAuth(email,password);
 
 
-      //ToDo revisar
       users = await lastValueFrom(apiResponse);
-      console.log(users);
 
     }catch(error){
       console.log(error);

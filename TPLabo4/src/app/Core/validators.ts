@@ -12,14 +12,12 @@ export function validator(validationService: ValidationsService): ValidatorFn {
         if (!value) {
             return null;
         }
-
+        
         validationService.checkDuplicate(value).then(answer=>{isValid = answer});
-       console.log(isValid == null);
+
         if(isValid == null){
-            console.log("hola");
              return null;   
         }else{
-            console.log("hola");
             return {emailInvalid: true};
         }
 
