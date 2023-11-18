@@ -12,7 +12,8 @@ import { ExerciseService } from 'src/app/Core/exercise.service';
 import { Exercise, FavouriteExercise, User } from 'src/app/Core/models';
 import { UserService } from 'src/app/Core/user.service';
 import { HttpClient } from '@angular/common/http';
-
+import { Component } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-view-ejercicios',
@@ -27,6 +28,7 @@ export class ViewEjerciciosComponent implements OnInit, AfterViewInit {
   public favouriteExercisesIDS: number[] = [];
   public excercises: Exercise[] = [];
   public user: User = new User();
+
 
   constructor(
     private apiService: ApiService,
@@ -104,22 +106,10 @@ export class ViewEjerciciosComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // this.onLikeClick();
+    this.onButtonClick();
   }
- 
 
-  // getLoggedUser(): User {
-  //   this.userService.currentUser.subscribe((currentUser) => {
-  //     this.apiService
-  //       .getUserLogged(currentUser.email, currentUser.password)
-  //       .subscribe((userLogged) => {
-  //         console.log(userLogged);
-  //         this.user = userLogged;
-  //       });
-  //   });
-  //   console.log("el usuario adentro del metodo pero afuera del service",this.user);
-  //   return this.user;
-  // }
+
 
   getRoutines() {
     this.apiService.getRoutines().subscribe((resp) => {
@@ -131,11 +121,12 @@ export class ViewEjerciciosComponent implements OnInit, AfterViewInit {
 
   getRoutineByDay(dayOftheweek: string) {
     this.apiService.getRoutinesByDay(dayOftheweek).subscribe((resp) => {
-      this.favouriteExercises = resp;
-      // console.log(resp);
-      // console.log(this.favouriteExercises);
+      this.routines = resp;
+      console.log(resp);
+      console.log(this.routines);
     });
   }
+
 
   /** Fetches exercises from the API.
    *
@@ -147,15 +138,35 @@ export class ViewEjerciciosComponent implements OnInit, AfterViewInit {
     });
   }
 
+
   /** Fetches exercises for a specific day of the week from the API.
    *
    * @param dayOfTheWeek - The day of the week for which exercises are requested.
    */
   getExcercisesByDay(dayOftheweek: string) {
-    this.exerciseService.getExercisesByType(dayOftheweek).subscribe((resp) => {
+    this.apiService.getExcercisesByType(dayOftheweek).subscribe((resp) => {
       this.excercises = resp;
-      // console.log("estoy aca",this.excercises);
+      console.log('estoy aca', this.excercises);
     });
+  }
+
+  // onLikeClick() {
+  //   // TODO: Implement like button functionality here
+  //   console.log(this.heartButton);
+  //   if(this.heartButton)
+  //     this.heartButton.nativeElement.classList.add('clicked');
+  // }
+
+  // onLikeClick() {
+  //   // Aquí podemos hacer algo cuando se hace clic en el botón
+  //   if (this.heartButton) {
+  //     this.heartButton.nativeElement.classList.add('heart-button-liked');
+  //     NgClass.apply('heart-button-liked');
+  //   }
+  // }
+  active = false;
+  onButtonClick() {
+    this.active = !this.active;
   }
 
   addExcerciseToFavourite(userID: number | null, exerciseID: number) {

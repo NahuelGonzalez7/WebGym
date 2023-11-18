@@ -22,11 +22,14 @@
 
 #banner h2 {
   font-size: 50px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: bold;
 }
 
 #banner p {
   font-size: 28px;
   color: black;
+  font-family: 'Heebo', sans-serif;
 }
 
 #banner a {
@@ -90,11 +93,13 @@
 .carousel-item {
   position: relative;
   max-height: 370px;
+  bottom: 50px;
 }
 
 .carousel-indicators {
   margin-bottom: 20px;
 }
+
 
 /*Form*/
 
