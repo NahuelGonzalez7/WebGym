@@ -3,19 +3,26 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { HomeComponent } from './home/home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { FavouriteExercisesComponent } from './home/favourite-exercises/favourite-exercises.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
 {
-  path: 'landing', component: LandingPageComponent, 
-
+  path: 'landing', component: LandingPageComponent
 },
 {
   path:'home', 
-  component: HomeComponent
+  component: HomeComponent, 
+  canActivate: [authGuard]
 },
 {
   path:'register',
   component: RegisterComponent
+},
+{
+  path:'favourites',
+  component: FavouriteExercisesComponent, 
+  canActivate: [authGuard]
 },
 {
   path: '',

@@ -42,9 +42,7 @@ export class ValidationsService {
             return "Formato de correo electrónico invalido";  
 
           case 'emailInvalid':
-            /*console.log("hola");*/
-           return "El email ya se encuentra ingresado"; 
-
+            return "El email ya se encuentra ingresado";  
       }
     }
  return null;
@@ -60,16 +58,12 @@ export class ValidationsService {
     try{
 
       let apiResponse =  this.apiService.duplicateEmail(email);
-      console.log(apiResponse);
 
       users = await lastValueFrom(apiResponse);
-      console.log(users);
 
     }catch(error){
       console.log(error);
     }
-
-    console.log(users.length == 1);
 
     return users.length == 1;
   

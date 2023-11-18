@@ -32,11 +32,31 @@
   outline: none;
 }
 
-.heart-button-liked {
+.heart-button:active {
   background-color: #424242;
   color: red;
   border: none;
   outline: none;
+}
+
+.heart-button:focus{
+  background-color: #424242;
+  border: none;
+  outline: 0;
+}
+
+.heart-button.clicked {
+  background-color: #424242;
+  color: red;
+  border: none;
+  outline: 0;
+}
+
+.heart-button.notclicked {
+  background-color: #424242;
+  color: white;
+  border: none;
+  outline: 0;
 }
 /* HEART STYLES */
 

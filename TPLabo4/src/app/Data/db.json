@@ -8,7 +8,31 @@
       "peso": 2,
       "altura": 2,
       "email": "m@gmail.com",
-       "password": "12345"
+      "password": "12345",
+      "favouriteExercise": [
+        {
+          "id": 1,
+          "exerciseID": 1
+        },
+        {
+          "id": 2,
+          "exerciseID": 3
+        },
+        {
+          "id": 3,
+          "exerciseID": 2
+        },
+        {
+          "id": 4,
+          "exerciseID": 2
+        },
+        {
+          "exerciseID": 4
+        },
+        {
+          "exerciseID": 4
+        }
+      ]
     },
         {
       "id": 2,
@@ -37,7 +61,7 @@
       "id": 3,
       "email": "nahuel@gmail.com",
       "password": "123",
-      "favourite_excercise": [
+      "favourite_exercise": [
         {
           "id": 1,
           "exerciseID": 1,
@@ -91,193 +115,28 @@
       "peso": "1",
       "altura": "12",
       "email": "mm@gmail.com",
-      "password": "123",
+      "password": "12345",
       "favouriteExercise": [
         {
-          "id": 2,
-          "exerciseID": 3,
-          "isFavourite": true
-  ],
-    "routines": {
-        "lunes": [
-            {
-                "ejercicio": "Abdominales",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": "Siéntese en una colchoneta, sus pantorrillas descansan en un banco, las rodillas forman un ángulo recto. Mantenga sus manos detrás de su cuello. Sube ahora con un movimiento de balanceo de tu espalda, debes sentir cómo las vértebras individuales pierden contacto con la colchoneta. En el punto más alto, contrae los abdominales tanto como puedas y mantenlos allí durante 2 segundos. Baja ahora, desenrollando tu espalda."
-            },
-            {
-                "ejercicio": "Biceps concentrado",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": "El curl de concentración es un ejercicio clásico para desarrollar los bíceps un brazo a la vez. Se puede realizar inclinado o de rodillas, pero se realiza más a menudo sentado en un banco. Es excelente para enfatizar el pico del bíceps y, a menudo, se usa para terminar un entrenamiento de bíceps."
-            },
-            {
-                "ejercicio": "Curl cuadriceps",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas. El ejercicio se realiza utilizando una máquina llamada Leg Extension Machine. Hay varios fabricantes de estas máquinas y cada uno es ligeramente diferente. La mayoría de los gimnasios y salas de pesas tendrán la máquina en sus instalaciones. La extensión de piernas es un ejercicio aislado dirigido a un grupo muscular específico, los cuádriceps. No debe considerarse como un entrenamiento total de piernas, como la sentadilla o el peso muerto. El ejercicio consiste en doblar la pierna a la altura de la rodilla y extender las piernas, para luego volver a bajarlas a la posición original."
-            }
-        ],
-        "martes": [
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            }
-        ],
-        "miercoles": [
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            }
-        ],
-        "jueves": [
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            }
-        ],
-        "viernes": [
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            }
-        ],
-        "sabado": [
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            }
-        ],
-        "domingo": [
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            },
-            {
-                "ejercicio": "",
-                "repeticiones": 2,
-                "series": 3,
-                "descripcion": ""
-            }
-        ]
+          "exerciseID": 2
+        }
+      ]
     },
-    "excercises": [
+    {
+      "id": 8,
+      "nombre": "",
+      "apellido": "",
+      "edad": null,
+      "peso": null,
+      "altura": null,
+      "email": "",
+      "password": "",
+      "favouriteExercise": []
+    }
+  ],
+"exercises":[
         {
+            "id": 1,
             "excercise": "Abdominales",
             "description": "Acuéstese boca arriba en una colchoneta con las rodillas flexionadas formando un angulo recto y los pies apoyados en el suelo. Coloque las manos detrás de la cabeza.Mantenga la espalda plana contra el suelo.Eleve el torso hacia las rodillas, manteniendo la espalda recta.Baje lentamente el torso a la posición inicial.",
             "repetitions": 10,
@@ -286,6 +145,7 @@
             "imageURL": "assets/Ejercicios/abs.jpg"
         },
         {
+            "id": 2,
             "excercise": "Curl de biceps con mancuernas",
             "description": "Párese o siéntese con la espalda recta y los hombros hacia atrás. Sostenga una mancuerna en cada mano con la palma de las manos hacia arriba. Mantenga los codos pegados al costado del cuerpo. Doble los codos para levantar las mancuernas hacia los hombros. Baje lentamente las mancuernas a la posición inicial.",
             "repetitions": 10,
@@ -294,6 +154,7 @@
             "imageURL": "assets/Ejercicios/biceps.jpg"
         },
         {
+          "id": 3,
             "excercise": "Sentadilla",
             "description": "Párese con los pies separados a la anchura de los hombros, con las puntas de los pies apuntando hacia delante. Coloque las manos en la cadera o a los lados del cuerpo. Mantenga la espalda recta y los hombros hacia atrás. Doble las rodillas para bajar el cuerpo, manteniendo la espalda recta y los talones apoyados en el suelo. Baja hasta que los muslos estén paralelos al suelo. Suba de nuevo a la posición inicial, extendiendo las rodillas.",
             "repetitions": 10,
@@ -302,6 +163,7 @@
             "imageURL": "assets/Ejercicios/sentadilla.jpg"            
         },
         {
+          "id": 4,
             "excercise": "Flexiones",
             "description": "Colóquese boca abajo con las manos separadas a la anchura de los hombros, con los dedos apuntando hacia delante. Eleve el cuerpo sobre las manos y los pies, manteniendo la espalda recta y la cabeza en línea con la columna vertebral. Doble los brazos para bajar el cuerpo, manteniendo la espalda recta y la cabeza en línea con la columna vertebral. Baja hasta que el pecho toque el suelo. Extienda los brazos para volver a la posición inicial.",
             "repetitions": 5,
@@ -310,6 +172,7 @@
             "imageURL": "assets/Ejercicios/flexiones.jpg"
         },
         {
+          "id": 5,
             "excercise": "Peso muerto",
             "description": "Párese con los pies separados a la anchura de los hombros y apuntando hacia adelante. Doble ligeramente las rodillas e incline el cuerpo hacia adelante desde las caderas, manteniendo la espalda recta y el core contraído. Baje hasta los talones con la mancuerna bien pegada al cuerpo. Levantese hasta la posición inicial",
             "repetitions": 5,
@@ -318,6 +181,7 @@
             "imageURL": "assets/Ejercicios/pesomuerto.jpg"
         },
         {
+          "id": 6,
             "excercise": "Sentadilla con barra",
             "description": "Colóquese de pie con los pies separados a la anchura de los hombros, con las puntas de los pies apuntando hacia delante. Coloque la barra sobre los hombros, con las manos a la anchura de los hombros, con las palmas hacia delante. Mantenga la espalda recta y los hombros hacia atrás. Inspire y baje el cuerpo, doblando las rodillas y manteniendo la espalda recta. Baja hasta que los muslos estén paralelos al suelo. Exhale y suba de nuevo a la posición inicial, extendiendo las rodillas.",
             "repetitions": 10,
@@ -326,6 +190,7 @@
             "imageURL": "assets/Ejercicios/sentadillabarra.jpg"           
         },
         {
+          "id": 7,
             "excercise": "Plancha",
             "description": "Colóquese boca abajo con los antebrazos apoyados en el suelo, a la altura de los hombros. Coloque las puntas de los pies en el suelo, con las rodillas rectas. Mantenga la espalda recta y el cuerpo en línea recta desde la cabeza hasta los pies. Mantenga la posición durante el tiempo que pueda, manteniendo la espalda recta y el cuerpo en línea recta.",
             "repetitions": 30,
@@ -334,6 +199,7 @@
             "imageURL": "assets/Ejercicios/plancha.jpg"
         },
         {
+          "id": 8,
             "excercise": "Extensiones de tríceps",
             "description": "Siéntese en un banco con los pies apoyados en el suelo. Sostenga una pesa rusa con ambas manos con las palmas hacia abajo. Coloque los brazos a los lados del cuerpo, con los codos doblados a un ángulo de 90 grados. Extienda los brazos enderezando los codos hasta que la pesa rusa esté a la altura de los hombros. Baje los brazos lentamente, doblando los codos.",
             "repetitions": 10,
@@ -342,6 +208,7 @@
             "imageURL": "assets/Ejercicios/triceps.jpg"
         },
         {
+          "id": 9,
             "excercise": "Estocada",
             "description": "Párese con los pies separados a la anchura de los hombros, con las puntas de los pies apuntando hacia delante. Mantenga la espalda recta y el core activado. Dé un paso hacia delante con una pierna, doblando la rodilla en un angulo de 90 grados. Mantenga la rodilla de la pierna trasera recta. Exhale y vuelva a la posición inicial, empujando con la pierna que ha dado el paso.",
             "repetitions": 10,
@@ -350,6 +217,7 @@
             "imageURL": "assets/Ejercicios/estocada.jpg"          
         },
         {
+          "id": 10,
             "excercise": "Polea al pecho",
             "description": "Siéntese en un banco con los pies apoyados en el suelo. Sujete una manija de polea en cada mano. Mantenga los brazos a los lados del cuerpo, con los codos doblados a un ángulo de 90 grados. Tire de las manijas hacia el pecho, juntando los omóplatos. Tire de las manijas hasta que los brazos estén paralelos al suelo. Baje los brazos lentamente a la posición inicial.",
             "repetitions": 10,
@@ -358,6 +226,7 @@
             "imageURL": "assets/Ejercicios/poleapecho.jpg"
         },
         {
+            "id": 10,
             "excercise": "Remo horizontal con mancuerna",
             "description": "Colócate sobre el banco con la rodilla flexionada y apoyando la palma de una mano. Sujeta la mancuerna con la otra mano. Suba la mancuerna hacia arriba, alineando el codo con el hombro y formando un angulo de 90 grados con el codo. Baje las mancuernas lentamente a la posición inicial quedando el brazo paralelo al piso",
             "repetitions": 8,
@@ -366,6 +235,7 @@
             "imageURL": "assets/Ejercicios/remohorizontal.jpg"
         },
         {
+          "id": 11,
             "excercise": "Puente lateral",
             "description": "Acuéstate de lado con el antebrazo apoyado en el suelo, la mano extendida hacia arriba y los pies uno encima del otro. Contrae los músculos abdominales y levanta el cuerpo hasta que forme una línea recta desde la cabeza a los talones. Mantén la posición durante 2-3 segundos. Baja lentamente el cuerpo hasta la posición inicial.",
             "repetitions": 10,
@@ -374,6 +244,7 @@
             "imageURL": "assets/Ejercicios/puentelateral.jpg"
         },
         {
+          "id": 12,
             "excercise": "Press con barra en banco plano",
             "description": "Colócate sobre el banco boca arriba con los pies apoyados en el suelo. Sujeta la barra con las manos separadas a la anchura de los hombros, con las palmas hacia abajo. Con los brazos extendidos, levanta la barra hasta que los codos estén alineados con los hombros. Baja la barra lentamente hasta la posición inicial, hasta que los brazos estén completamente extendidos.",
             "repetitions": 12,
@@ -382,6 +253,7 @@
             "imageURL": "assets/Ejercicios/presspecho.jpg"
         },
         {
+          "id": 13,
             "excercise": "Indoor cycle",
             "description": "Ajusta la bicicleta a tu altura y comodidad. Coloca los pies en los pedales con los dedos apuntando hacia delante. Agarra los manillares con las manos separadas a la anchura de los hombros. Empieza a pedalear a un ritmo cómodo. Conforme vayas calentando, aumenta la intensidad del pedaleo. Para terminar, baja la intensidad del pedaleo y luego detén la bicicleta.",
             "repetitions": 60,
@@ -390,6 +262,7 @@
             "imageURL": "assets/Ejercicios/indoorcycle.jpg"
         },
         {
+          "id": 13,
             "excercise": "Vuelo lateral de hombro",
             "description": "Sostenga una mancuerna en cada mano con las palmas hacia los lados. Párese con los pies separados a la anchura de los hombros y las rodillas ligeramente flexionadas. Mantenga la espalda recta y los hombros relajados. Levante las mancuernas a los lados hasta que estén en línea con los hombros. Baje lentamente las mancuernas hasta la posición inicial.",
             "repetitions": 12,
@@ -398,6 +271,7 @@
             "imageURL": "assets/Ejercicios/vuelolateral.jpg"          
         },
         {
+          "id": 14,
             "excercise": "Abdominales bicicleta",
             "description": "Acuéstese de espaldas en el suelo con las rodillas flexionadas y los pies apoyados en el suelo. Coloque las manos detrás de la cabeza con los dedos entrelazados. Levante las rodillas hacia el pecho, doblando los codos y tocando la rodilla derecha con el codo izquierdo. Regrese a la posición inicial.            Repita el ejercicio, tocando la rodilla izquierda con el codo derecho",
             "repetitions": 12,
@@ -406,6 +280,7 @@
             "imageURL": "assets/Ejercicios/abscruzado.jpg"
         },
         {
+          "id": 15,
             "excercise": "Patada de glúteo",
             "description": "Acuéstese boca abajo con las rodillas flexionadas y los pies apoyados en el suelo. Apoye las manos en la colchoneta en un ancho de hombros. Eleve una pierna hacia arriba, manteniendo la rodilla flexionada a un ángulo de 90 grados. Baje la pierna lentamente hasta la posición inicial. Repita el ejercicio con la otra pierna",
             "repetitions": 10,
@@ -414,6 +289,7 @@
             "imageURL": "assets/Ejercicios/patadagluteo.jpg"
         },
         {
+          "id": 16,
             "excercise": "Press de piernas",
             "description": "Siéntese en la máquina de prensa de piernas con los pies apoyados en la plataforma. Ajuste los respaldos de la máquina para que sus rodillas queden ligeramente flexionadas. Agarre los mangos de la máquina con las manos separadas a la anchura de los hombros. Extienda las piernas empujando la plataforma hacia arriba hasta que los muslos estén paralelos al suelo. Baje lentamente las piernas hasta la posición inicial",
             "repetitions": 8,
@@ -422,6 +298,7 @@
             "imageURL": "assets/Ejercicios/presspierna.jpg"           
         },
         {
+          "id": 17,
             "excercise": "Elevacion de cadera",
             "description": "Acuéstese boca arriba con las rodillas flexionadas y los pies apoyados en el suelo. Coloque las manos a los lados del cuerpo o detrás de la cabeza con los dedos entrelazados. Levante las caderas del suelo hasta que el cuerpo forme una línea recta desde los hombros hasta las rodillas. Baje lentamente las caderas hasta la posición inicial.",
             "repetitions": 10,
@@ -429,37 +306,32 @@
             "excerciseType": "resistencia",
             "imageURL": "assets/Ejercicios/elevacioncadera.jpg"           
         },
-        {
-            "excercise": "Peso muerto a una pierna",
-            "description": "Párese con los pies separados a la anchura de los hombros, con la pierna derecha adelantada. Mantenga la espalda recta y el core contraído. Doble la rodilla derecha y baje el torso hasta que el muslo derecho quede paralelo al suelo. Extienda la rodilla derecha y vuelva a la posición inicial. Repita el ejercicio con la pierna izquierda.",
-            "repetitions": 8,
-            "series": 3,
-            "excerciseType": "musculación",
-            "imageURL": "assets/Ejercicios/pesomuertounapierna.jpg"           
-      "password": "12345",
-      "favouriteExercise": [
-        {
-          "id": 1,
-          "exerciseID": 1
-        },
-        {
-          "id": 2,
-          "exerciseID": 3
-        },
-        {
-          "id": 3,
-          "exerciseID": 2
-        },
-        {
-          "id": 4,
-          "exerciseID": 2
-        },
-        {
-          "exerciseID": 4
-        },
-        {
-          "exerciseID": 4
-        }
-      ]
-    }
+          {
+      "id": 18,
+      "exercise": "Press de piernas",
+      "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas.",
+      "repetitions": 2,
+      "series": 3,
+      "exerciseType": "nada",
+      "imageURL": "assets/Ejercicios/presspierna.jpg"
+    },
+    {
+      "id": 19,
+      "exercise": "Elevacion de cadera",
+      "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas.",
+      "repetitions": 2,
+      "series": 3,
+      "exerciseType": "nada",
+      "imageURL": "assets/Ejercicios/elevacioncadera.jpg"
+    },
+    {
+      "id": 20,
+      "exercise": "Peso muerto a una pierna",
+      "description": "La extensión de piernas es un ejercicio de entrenamiento con pesas de resistencia que se enfoca en el músculo cuádriceps de las piernas.",
+      "repetitions": 2,
+      "series": 3,
+      "exerciseType": "nada",
+      "imageURL": "assets/Ejercicios/pesomuertounapierna.jpg"
+    }   
+    ]
 }

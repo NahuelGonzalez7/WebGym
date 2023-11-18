@@ -89,8 +89,7 @@ export class ApiService {
    */
   getRoutines(): Observable<FavouriteExercise[]> {
     return this.http.get<FavouriteExercise[]>(`${this.baseURL}/routines`).pipe(
-      map((data: any) => {
-        console.log(data[0]);
+      map((data: any) => {        
         return data[0];
       })
     );

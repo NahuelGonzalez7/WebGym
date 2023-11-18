@@ -14,11 +14,7 @@ import Swal from 'sweetalert2';
 })
 export class AddUserComponent{
 
-  constructor(private validationService: ValidationsService, private fb: FormBuilder, private apiService: ApiService){
-/* 
-    this.apiService.duplicateEmail("m@gmail.com").subscribe(answer => {console.log(answer)});
-    this.validationService.checkDuplicate("milagros@gmail.com").then(answer => {console.log(answer)});*/
-  };
+  constructor(private validationService: ValidationsService, private fb: FormBuilder, private apiService: ApiService) { };
 
   public newUser: User = new User();
   public mostrar: boolean = false;
@@ -26,7 +22,7 @@ export class AddUserComponent{
   @Output() public userToCreate: EventEmitter<User> = new EventEmitter();
   
   private emailPattern: RegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  /*private checkDuplicate2: Promise<boolean> = this.validationService.checkDuplicate(this.newUser.email);*/
+
 
   loginForm: FormGroup = this.fb.group({
     nombre: new FormControl(" ", [Validators.required, Validators.maxLength(10)]),
@@ -142,7 +138,6 @@ public async isEmailDuplicate(email:string): Promise<boolean>{
  */
 
 public async checkDuplicateEmail(){
-  console.log("Hola entre");
   const check = this.isEmailDuplicate(this.newUser.email);
   
   if(await check){

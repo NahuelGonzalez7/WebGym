@@ -20,6 +20,7 @@ export class AuthService {
    * @throws {Error} If an error occurs during the authentication process.
    */
   
+  //Puede retornar boolean solo
   public async checkAuth(email:string, password: string): Promise<boolean>{
 
     let users: User[] = [];
@@ -27,6 +28,7 @@ export class AuthService {
     try{
 
       let apiResponse =  this.apiService.getUserToAuth(email,password);
+
 
       users = await lastValueFrom(apiResponse);
 

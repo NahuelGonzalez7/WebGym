@@ -1,5 +1,5 @@
 <header>
-<div *ngIf = "!isUser" class="contenedor">
+  <div *ngIf="!isUser" class="contenedor">
 
  <a href=""> <h1>FITNESS GYM</h1></a>
     
@@ -13,17 +13,22 @@
 
     </nav>
 
-</div>
+  </div>
 
-<!-- Nav Bar User loggeado-->
-<div *ngIf = "isUser" class="contenedor">
+  <!-- Nav Bar User loggeado-->
+  <div *ngIf="isUser" class="contenedor">
+
+    <a href="">
+      <h1>FITNESS GIM</h1>
+    </a>
+
 
   <a href=""> <h1>FITNESS GYM</h1></a>
   
   <div class = "menu-user">
   <a>Tus Rutinas</a>
   <a (click)="navigateToLanding()">Salir</a>
+
   </div>
-</div>
 
 </header>

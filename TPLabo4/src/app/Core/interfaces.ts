@@ -16,18 +16,15 @@ export interface IfavouriteExercise{
 
 export interface Iexercise {
     id: number | null;
-    excercise: string;
+    exercise: string;
     description: string;
     repetitions: number;
     series: number;
-    //ToDo agregar tipo de ejercicio
-    //tipo de ejercicio tambien estaria muy bueno que sea un enum para manejar el filtro 
     exerciseType: string;
     imageURL: string;
 }
 
-//ToDo agregar enums
-//Estaria muy bueno que los dias los pueda manejar con enums para filtrar la info
+
 export enum Edays{
     lunes,
     martes,

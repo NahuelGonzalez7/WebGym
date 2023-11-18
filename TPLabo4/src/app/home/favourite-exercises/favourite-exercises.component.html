@@ -1,0 +1,27 @@
+<body>
+    <header>
+        <app-nav-bar [isFavourite]="false" [isUser]="true" [goBack]="true"></app-nav-bar>
+    </header>
+
+    <div id="excerciseContainer">        
+        <h2 id="title-class">Mis Ejercicios Favoritos</h2>
+        <div id="cardsContainer">
+            <ul *ngFor="let exercise of favouriteExercises" style="max-width: 20%; margin-right: 1%;">
+                <li>
+                    <mat-card class="card">
+                        <mat-card-header>
+                            <mat-card-title>{{exercise.exercise}}
+                            </mat-card-title>
+                        </mat-card-header>
+                        <img mat-card-image src="{{exercise.imageURL}}" alt="Photo of a Shiba Inu">
+                        <mat-card-content>
+                            <p> {{exercise.description}} </p>
+                        </mat-card-content>
+                    </mat-card>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</body>

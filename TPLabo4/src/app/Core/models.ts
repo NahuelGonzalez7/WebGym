@@ -1,9 +1,4 @@
-
 import { Iexercise, IfavouriteExercise, Ipersona } from "./interfaces";
-
-
-
-
 
 export class User implements Ipersona {
   id: number;
@@ -42,7 +37,7 @@ export class FavouriteExercise implements IfavouriteExercise{
 
 export class Exercise implements Iexercise {
   id: number;
-  excercise: string;
+  exercise: string;
   description: string;
   repetitions: number;
   series: number;
@@ -51,15 +46,14 @@ export class Exercise implements Iexercise {
   imageURL: string;
 
 
-  constructor(excercise?:any){
-    this.id = excercise == undefined ? null : excercise.id;
-    this.excercise = excercise == undefined ? '' : excercise.excercise;
-    this.description = excercise == undefined ? '' : excercise.description;
-    this.repetitions = excercise == undefined ? null : excercise.repetitions;
-    this.series = excercise == undefined ? null : excercise.series;
-    this.exerciseType = excercise == undefined ? null : excercise.exerciseType;
-    this.imageURL = excercise == undefined ? null : excercise.imageURL;
-
+  constructor(exercise?:any){
+    this.id = exercise == undefined ? null : exercise.id;
+    this.exercise = exercise == undefined ? '' : exercise.excercise;
+    this.description = exercise == undefined ? '' : exercise.description;
+    this.repetitions = exercise == undefined ? null : exercise.repetitions;
+    this.series = exercise == undefined ? null : exercise.series;
+    this.exerciseType = exercise == undefined ? null : exercise.excerciseType;
+    this.imageURL = exercise == undefined ? null : exercise.imageURL;
   }
 }
 

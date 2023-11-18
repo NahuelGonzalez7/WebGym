@@ -1,0 +1,109 @@
+/* CARD STYLES */
+
+.card{
+    height: 600px;
+    margin: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-header-image {
+    background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+    background-size: cover;
+  }
+  
+  #cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 400px;
+  }
+  /* CARD STYLES */
+  
+  /* HEART STYLES */
+  .heart-button {
+    cursor: pointer;
+    padding: 0;
+    color: white;
+    background-color: #424242;
+    border: none;
+    outline: none;
+  }
+  
+  .heart-button:active {
+    background-color: #424242;
+    color: red;
+    border: none;
+    outline: none;
+  }
+  
+  .heart-button:focus{
+    background-color: #424242;
+    border: none;
+    outline: 0;
+  }
+  
+  .heart-button.clicked {
+    background-color: #424242;
+    color: red;
+    border: none;
+    outline: 0;
+  }
+  
+  .heart-button.notclicked {
+    background-color: #424242;
+    color: white;
+    border: none;
+    outline: 0;
+  }
+  /* HEART STYLES */
+  
+  /*MAT-CARD STYLES*/
+  mat-card-header {
+    display: block;
+  }
+  
+  mat-card-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  p {
+    margin-top: 10px;
+    color: #6c757d;
+  }
+  /*MAT-CARD STYLES*/
+  
+  /* LIST STYLES */
+  ul {
+    list-style-type: none;
+  }
+  /* LIST STYLES */
+  
+  /*TITLE STYLE*/
+  #title-class {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  /*TITLE STYLE*/
+  
+  /* BODY STYLE */
+  body {
+    min-height: 100vh;
+    margin: 0;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #excerciseContainer {
+    margin-top: 3%;
+    flex: 1;
+  }
+
+  /* BODY STYLE */
