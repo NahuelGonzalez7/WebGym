@@ -4,7 +4,8 @@ import { ApiService } from '../Core/api.service';
 import { ValidationsService } from '../Core/validations.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { validator } from '../Core/validators';
-
+import { lastValueFrom } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-user',
@@ -16,11 +17,11 @@ export class AddUserComponent{
   constructor(private validationService: ValidationsService, private fb: FormBuilder, private apiService: ApiService) { };
 
   public newUser: User = new User();
+  public mostrar: boolean = false;
 
   @Output() public userToCreate: EventEmitter<User> = new EventEmitter();
   
   private emailPattern: RegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  private checkDuplicate2: Promise<boolean> = this.validationService.checkDuplicate(this.newUser.email);
 
 
   loginForm: FormGroup = this.fb.group({
@@ -29,7 +30,7 @@ export class AddUserComponent{
     edad: new FormControl(" ", [Validators.required, Validators.maxLength(3)]),
     peso: new FormControl(" ", [Validators.required, Validators.maxLength(3)]),
     altura: new FormControl(" ", [Validators.required, Validators.maxLength(3)]),
-    email: new FormControl(" ",[Validators.required, Validators.pattern(this.emailPattern), validator(this.validationService)]),
+    email: new FormControl(" ",[Validators.required, Validators.pattern(this.emailPattern)/*,validator(this.validationService)*/]),
     password: new FormControl(" ", [Validators.required, Validators.minLength(5)])
 
   })
@@ -76,6 +77,15 @@ export class AddUserComponent{
   }
 
     
+/**
+ * @method checkDuplicate: Checks for duplicate user emails using the validation service.
+ * 
+ * @param user - The user object containing the email to be checked for duplication.
+ * @returns A boolean indicating whether the email is unique (true) or a duplicate (false).
+ * @throws Error - If an error occurs during the email duplication check.
+ */
+
+
  public async checkDuplicate(user: User){
 
   let error: boolean = true;
@@ -90,6 +100,60 @@ export class AddUserComponent{
 
   return error;
 
+}
+
+/**
+ * @method isEmailDuplicate: Checks if the given email is a duplicate by querying the API service.
+ * 
+ * @param email - The email address to be checked for duplication.
+ * @returns A promise that resolves to a boolean indicating whether the email is a duplicate (true) or not (false).
+ * @throws Error - If an error occurs during the email duplication check.
+ */
+
+public async isEmailDuplicate(email:string): Promise<boolean>{
+
+  let users: User[] = [];
+
+  try{
+
+    let apiResponse =  this.apiService.duplicateEmail(email);
+
+    users = await lastValueFrom(apiResponse);
+
+  }catch(error){
+    console.log(error);
+  }
+
+  return users.length == 1;
+
+}
+
+/**
+ * @method checkDuplicateEmail: Checks if the email of the new user is a duplicate and displays an error message if so.
+ * @remarks
+ * This function logs a message to the console and uses a notification library (SweetAlert2) to display an error
+ * message if the provided email for the new user is already registered.
+ * 
+ * @throws Error - If an error occurs during the email duplication check.
+ */
+
+public async checkDuplicateEmail(){
+  const check = this.isEmailDuplicate(this.newUser.email);
+  
+  if(await check){
+
+   Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "El email ingresado ya se encuentra registrado"
+    });
+  /*this.getFieldError("emailInvalid");*/
+  }
+  else{    
+   console.log("Email valido");
+ 
+  }
 } 
+
 
 }

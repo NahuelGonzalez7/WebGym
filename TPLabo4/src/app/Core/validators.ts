@@ -15,12 +15,6 @@ export function validator(validationService: ValidationsService): ValidatorFn {
         
         validationService.checkDuplicate(value).then(answer=>{isValid = answer});
 
-        if(isValid == null){
-             return null;   
-        }else{
-            return {emailInvalid: true};
-        }
-
-        return isValid?null:{emailInvalid:true};
+      return isValid?null:{emailInvalid:true};
     };
 }

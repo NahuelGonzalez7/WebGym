@@ -1,7 +1,6 @@
 /*Form*/
 
-.open-button,
-.submit-button {
+.open-button {
   display: flex;
   background-color: rgba(211, 211, 211, 0.4);
   color: black;
@@ -17,15 +16,24 @@
   justify-content: center;
 }
 
-.submit-button:disabled {
-  background-color: rgba(211, 211, 211, 0.4);
-}
-
 .submit-button {
-  margin-top: 45px;
+  display: flex;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px 20px;
+  border: 1px solid #555;
+  cursor: pointer;
+  justify-content: center;
+  margin-top: 50px;
   width: 100%;
   border-radius: 5%;
   background-color: #39db34;
+}
+
+.submit-button:disabled {
+  background-color: rgba(211, 211, 211, 0.4);
 }
 
 .open-button:hover {

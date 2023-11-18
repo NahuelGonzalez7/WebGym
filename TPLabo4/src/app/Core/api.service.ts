@@ -73,6 +73,7 @@ export class ApiService {
    * @throws {Error} If the HTTP request fails or encounters an error.
    */
 
+  
   duplicateEmail(email: string): Observable<User[]> {
     return this.http.get<User[]>(`${this.baseURL}/users?email=${email}`);
   }  

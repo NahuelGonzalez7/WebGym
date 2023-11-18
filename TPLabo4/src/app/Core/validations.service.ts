@@ -16,6 +16,9 @@ export class ValidationsService {
   public isValidForm(field: string, FormGroup: FormGroup): boolean | null{
     return FormGroup.controls[field].errors && FormGroup.controls[field].touched;}
 
+
+    
+
   public getFormError(field: string, FormGroup: FormGroup): string | null{  
 
     if(!FormGroup.controls[field]) return null;
@@ -40,11 +43,13 @@ export class ValidationsService {
 
           case 'emailInvalid':
             return "El email ya se encuentra ingresado";  
-
       }
     }
  return null;
   }
+
+  
+
 
   public async checkDuplicate(email:string): Promise<boolean>{
 
@@ -61,7 +66,7 @@ export class ValidationsService {
     }
 
     return users.length == 1;
-    
+  
   }
   
 }

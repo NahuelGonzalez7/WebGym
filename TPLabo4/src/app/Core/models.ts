@@ -54,7 +54,6 @@ export class Exercise implements Iexercise {
     this.series = exercise == undefined ? null : exercise.series;
     this.exerciseType = exercise == undefined ? null : exercise.excerciseType;
     this.imageURL = exercise == undefined ? null : exercise.imageURL;
-
   }
 }
 

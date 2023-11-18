@@ -3,6 +3,11 @@ import { ApiService } from 'src/app/Core/api.service';
 import { ExerciseService } from 'src/app/Core/exercise.service';
 import { Exercise, FavouriteExercise, User } from 'src/app/Core/models';
 import Swal from 'sweetalert2';
+import { UserService } from 'src/app/Core/user.service';
+import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { NgClass } from '@angular/common';
+
 
 @Component({
   selector: 'app-view-ejercicios',
@@ -19,6 +24,7 @@ export class ViewEjerciciosComponent implements OnInit {
   public user: User = new User();
 
   constructor(private apiService: ApiService,private exerciseService: ExerciseService) {}
+
 
   ngOnInit(): void {
     this.getLocalStorageUser();
@@ -47,6 +53,7 @@ export class ViewEjerciciosComponent implements OnInit {
     });
   }
 
+
   /** Fetches exercises from the API.
    *
    */
@@ -56,6 +63,7 @@ export class ViewEjerciciosComponent implements OnInit {
       console.table(this.exercises);
     });
   }
+
 
   /** Fetches exercises for a specific day of the week from the API.
    *
