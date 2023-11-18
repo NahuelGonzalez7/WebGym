@@ -1,29 +1,34 @@
 <header>
-<div *ngIf = "!isUser" class="contenedor">
+  <div *ngIf="!isUser" class="contenedor">
 
-    <a href=""> <h1>FITNESS GIM</h1></a>
-    
-    <input type= "checkbox" id= "menu-bar">
-    <label class= "fa fa-bars"  for="menu-bar"></label>
+    <a href="">
+      <h1>FITNESS GIM</h1>
+    </a>
+
+    <input type="checkbox" id="menu-bar">
+    <label class="fa fa-bars" for="menu-bar"></label>
     <nav class="menu">
 
-    <a (click) = "nosotros()">Nosotros</a>
-    <a (click) = "servicios()">Servicios</a>
-    <a (click) = "contacto()">Contacto</a>
+      <a (click)="nosotros()">Nosotros</a>
+      <a (click)="servicios()">Servicios</a>
+      <a (click)="contacto()">Contacto</a>
 
     </nav>
 
-</div>
-
-<!-- Nav Bar User loggeado-->
-<div *ngIf = "isUser" class="contenedor">
-
-  <a href=""> <h1>FITNESS GIM</h1></a>
-  
-  <div class = "menu-user">
-  <a>Tus Rutinas</a>
-  <a (click)="navigateToLanding()">Salir</a>
   </div>
-</div>
+
+  <!-- Nav Bar User loggeado-->
+  <div *ngIf="isUser" class="contenedor">
+
+    <a href="">
+      <h1>FITNESS GIM</h1>
+    </a>
+
+    <div class="menu-user">
+      <a *ngIf="isFavourite" (click)="navigateToFavourite()">Tus Favoritos</a>
+      <a *ngIf="goBack" (click)="navigateToHome()">Volver</a>
+      <a (click)="navigateToLanding()">Salir</a>
+    </div>
+  </div>
 
 </header>

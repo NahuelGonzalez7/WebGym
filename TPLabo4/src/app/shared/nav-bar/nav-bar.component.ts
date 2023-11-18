@@ -10,6 +10,8 @@ import Swal from 'sweetalert2';
 export class NavBarComponent implements OnInit{
 
 @Input() isUser : boolean = false;
+@Input() isFavourite: boolean = false;
+@Input() goBack: boolean = false;
   
 constructor(private router : Router){}
 
@@ -26,6 +28,14 @@ ngOnInit(): void {
 public navigateToLanding(){
   localStorage.removeItem('user');
   this.router.navigate(['//landing']);
+}
+
+navigateToFavourite() {
+  this.router.navigate(['/favourites']);
+}
+
+navigateToHome(){
+  this.router.navigate(['/home']);
 }
 
 
